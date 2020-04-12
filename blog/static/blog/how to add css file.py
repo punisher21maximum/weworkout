@@ -1,3 +1,22 @@
+#how to add url name in .html
+#create super user 
+^C(venv) gaurav7x7@ubuntu:~/workspace/ConviMax3/weworkout$ python3.6 manage.py createsuperuser
+Username (leave blank to use 'gaurav7x7'): vishal
+Email address: vishal7x7@gmail.com
+Password: 
+Password (again): 
+Superuser created successfully.
+(venv) gaurav7x7@ubuntu:~/workspace/ConviMax3/weworkout$ 
+#to view the sql code of migrations you have run
+(venv) gaurav7x7@ubuntu:~/workspace/ConviMax3/weworkout$ python3.6 manage.py sqlmigrate blog 0001
+BEGIN;
+--
+-- Create model Post
+--
+CREATE TABLE "blog_post" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "title" varchar(100) NOT NULL, "content" text NOT NULL, "date_posted" datetime NOT NULL, "author_id" integer NOT NULL REFERENCES "auth_user" ("id") DEFERRABLE INITIALLY DEFERRED);
+CREATE INDEX "blog_post_author_id_dd7a8485" ON "blog_post" ("author_id");
+COMMIT;
+
 # how to add css file
 
 step1 : where to store main.css
