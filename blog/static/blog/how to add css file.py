@@ -16,6 +16,27 @@ BEGIN;
 CREATE TABLE "blog_post" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "title" varchar(100) NOT NULL, "content" text NOT NULL, "date_posted" datetime NOT NULL, "author_id" integer NOT NULL REFERENCES "auth_user" ("id") DEFERRABLE INITIALLY DEFERRED);
 CREATE INDEX "blog_post_author_id_dd7a8485" ON "blog_post" ("author_id");
 COMMIT;
+#creating model(Post model) objects in django shell
+(venv) gaurav7x7@ubuntu:~/workspace/ConviMax3/weworkout$ python3.6 manage.py shell
+>>> from blog.models import Post
+>>> from django.contrib.auth.models import User
+
+>>> User.objects.all()
+<QuerySet [<User: vishal>]>
+>>> User.objects.filter(username='vishal').first()
+<User: vishal>
+
+
+>>> u = User.objects.filter(username='vishal').first()
+>>> post_1 = Post(title='fitness', content='first post content', author = u)
+or
+>>> post_1 = Post(title='fitness', content='first post content', author_id = u.id)#by uder id
+>>> post_1.save()
+>>> Post.objects.all()
+<QuerySet [<Post: fitness>]>
+
+
+
 
 # how to add css file
 
