@@ -1,6 +1,6 @@
 {% extends "blog/base.html" %}
 {% block content %}
-  <article class="media content-section">
+  <article class="media content-section text-dark">
     <img class="rounded-circle article-img" src="{{ object.author.profile.image.url }}">
     <div class="media-body">
       <div class="article-metadata">
@@ -18,48 +18,8 @@
       <p class="article-content">{{ object.content }}</p>
     </div>
   </article>
-   <div class="row float" >
-        <div class="col-md-4">
-            <!-- card -->
-            <div class="card" style="width: 100%;">
-              <img style="height:350px" src="{{ object.author.profile.image.url }}" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">{{ object.title }}</h5>
-                <p class="card-text">{{ object.content | truncatechars:100}}</p>
-            <!--       <a href="#" class="btn btn-primary">Go somewhere</a> -->    
-              </div>
-            </div>
-            <!-- card end -->
-        </div>
-        <div class="col-md-4">
-              <!-- card -->
-            <div class="card" style="width: 100%;">
-              <img style="height:350px" src="{{ object.author.profile.image.url }}" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">{{ object.title }}</h5>
-                <p class="card-text">{{ object.content | truncatechars:100}}</p>
-            <!--       <a href="#" class="btn btn-primary">Go somewhere</a> -->    
-              </div>
-            </div>
-            <!-- card end -->
-        </div>
-        <div class="col-md-4">
-            <!-- card -->
-            <div class="card" style="width: 100%;">
-              <img style="height:350px" src="{{ object.author.profile.image.url }}" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">{{ object.title }}</h5>
-                <p class="card-text">{{ object.content | truncatechars:100}}</p>
-            <!--       <a href="#" class="btn btn-primary">Go somewhere</a> -->    
-              </div>
-            </div>
-            <!-- card end -->
-        </div>
-    </div>
+  
            
-  <hr>
-  <hr>
-  <hr>
-  <hr>
+
 
 {% endblock content %}

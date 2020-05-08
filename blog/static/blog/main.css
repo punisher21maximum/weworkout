@@ -29,6 +29,7 @@ ul {
 }
 
 .content-section {
+  color: #ffff00;
   background: #ffffff;
   padding: 10px 20px;
   border: 1px solid #dddddd;
@@ -82,3 +83,81 @@ a.article-title:hover {
 .account-heading {
   font-size: 2.5rem;
 }
+
+.step{
+  font-size: 30px;
+}
+
+.footer {
+  color: white;
+  background-color: black;
+  margin: 0px auto;
+  padding: 20px 0px; }
+
+address {
+  font-size: 80%;
+  margin: 0px;
+   }
+
+.side_bar {
+
+  color : #ffff90;
+}
+
+.link_color {
+  color : black;
+}
+
+a.nounderline{
+  text-decoration: none;
+}
+
+.btn_all{
+  padding:8px 14px;
+  font-weight: 900;
+  border-radius: 7px;
+  font-size: 12px;
+  transition-duration : 0.5s;
+}
+.btn_all:hover{
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+.btn_pagi{
+  color : white;
+  background-color: black;
+  border: 2px solid black;
+
+}
+
+.btn_pagi:hover {
+  color : black;
+  background-color: white;
+  border: 2px solid black;  
+}
+
+.btn_pagi_outline {
+  color : black;
+  background-color: #ffcc00;
+  border: 2px solid black; 
+}
+
+.btn_pagi_outline:hover{
+  color : white;
+  background-color: black;
+  border: 2px solid black;
+
+}
+
+.card_shadow  {
+  -webkit-box-shadow: -4px 15px 18px -13px rgba(0,0,0,1);
+  -moz-box-shadow: -4px 15px 18px -13px rgba(0,0,0,1);
+  box-shadow: -4px 15px 18px -13px rgba(0,0,0,1);
+  }
+
+.card_shadow : hover {
+  -webkit-box-shadow: 0px 14px 28px -12px rgba(0,0,0,1);
+  -moz-box-shadow: 0px 14px 28px -12px rgba(0,0,0,1);
+  box-shadow: 0px 14px 28px -12px rgba(0,0,0,1);
+  }

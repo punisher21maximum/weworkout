@@ -1,24 +1,60 @@
 {% extends "blog/base.html" %}
+{% load static %}
 {% block content %}
-<!-- <div class="col-md-12"> -->
+<div class="container-fluid">
 	<div class="row">
     {% for post in posts %}
 
 <!-- card -->
-                <div class="card" style="width: 33%;margin-bottom: 15px;padding:10px;">
-                  <img style="height:350px" src="{{ post.author.profile.image.url }}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h2><a class="article-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
-                    <p class="card-text">{{ post.content | truncatechars:100}}</p>
-                <!--       <a href="#" class="btn btn-primary">Go somewhere</a> -->    
-                  </div>
-                </div>
+      <div class="card m-2 rounded-0 card_shadow" 
+        style="width: 16rem; "> 
+        <img style="height:200px" src="{% static 'blog/carousel_img/3.webp' %}" class="card-img-top rounded-0" alt="...">
+        <div class="card-body">
+          <h6><b><a class="article-title" href="{% url 'post-detail' post.id %}">
+            {{ post.title | truncatechars:23 }}
+          </a></b></h6>
+          <i>by</i>
+          <b><a class="article-title" href="{% url 'user-posts' post.author.username %}">
+            {{ post.author|upper }}
+          </a></b>
+          <small class="card-text" style="font:8;">
+            {{ post.content | truncatechars:50}}
+          </small>
+        </div>
+      </div>
 <!-- card end -->
 
     {% endfor %}
    	</div>
-<!-- </div> -->
+    <div class="my-4">
     {% if is_paginated %}
+
+      {% if page_obj.has_previous %}
+        <a class="btn_all btn_pagi nounderline mb-4" href="?page=1">First</a>
+        <a class="btn_all btn_pagi nounderline mb-4" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+      {% endif %}
+
+      {% for num in page_obj.paginator.page_range %}
+        {% if page_obj.number == num %}
+          <a class="btn_all btn_pagi_outline nounderline mb-4" href="?page={{ num }}">{{ num }}</a>
+        {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+          <a class="btn_all btn_pagi nounderline mb-4" href="?page={{ num }}">{{ num }}</a>
+        {% endif %}
+      {% endfor %}
+
+      {% if page_obj.has_next %}
+        <a class="btn_all btn_pagi nounderline mb-4" href="?page={{ page_obj.next_page_number }}">Next</a>
+        <a class="btn_all btn_pagi nounderline mb-4" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+      {% endif %}
+
+    {% endif %}
+    </div>
+</div>
+{% endblock content %}
+
+
+<!-- src="{{ post.author.profile.image.url }}" -->
+<!--    {% if is_paginated %}
 
       {% if page_obj.has_previous %}
         <a class="btn btn-outline-info mb-4" href="?page=1">First</a>
@@ -38,5 +74,4 @@
         <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
       {% endif %}
 
-    {% endif %}
-{% endblock content %}
+    {% endif %} -->
