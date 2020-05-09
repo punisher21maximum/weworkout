@@ -1,21 +1,41 @@
 {% extends "blog/base.html" %}
 {% block content %}
   <article class="media content-section text-dark">
-    <img class="rounded-circle article-img" src="{{ object.author.profile.image.url }}">
+    <img class="rounded-circle article-img" src="{{ eachpost.author.profile.image.url }}">
     <div class="media-body">
       <div class="article-metadata">
-        <a class="mr-2" href="#">{{ object.author }}</a>
-        <small class="text-muted">{{ object.date_posted}}</small>
-        {% if object.author == user %}
+        <a class="mr-2" href="#">{{ eachpost.author }}</a>
+        <small class="text-muted">{{ eachpost.date_posted}}</small>
+        {% if eachpost.author == user %}
           <div>
-            <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'post-update' object.id %}">Update</a>
-            <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'post-delete' object.id %}">Delete</a>
+            <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'post-update' eachpost.id %}">Update</a>
+            <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'post-delete' eachpost.id %}">Delete</a>
           </div>
         {% endif %}
       </div>
       <br>
-      <h2 class="article-title">{{ object.title }}</h2>
-      <p class="article-content">{{ object.content }}</p>
+      <!-- like -->
+
+          <a href="#" onClick="document.getElementById('likebutton').submit()"><i class="fa fa-thumbs-up"> {{eachpost.likes}} </i></a> 
+              |
+          <a href="#" onClick="document.getElementById('dislikebutton').submit()"><i class="fa fa-thumbs-down"> {{eachpost.dislikes}} </i></a> 
+      
+
+
+          <form id="likebutton" method="POST" action="/post/{{eachpost.id}}/preference/1/">
+          {% csrf_token %}
+          <input type="hidden">
+          </form>
+
+          <form id="dislikebutton" method="POST" action="/post/{{eachpost.id}}/preference/2/">
+          {% csrf_token %}
+          <input type="hidden">
+          </form>
+
+          <!-- like end -->
+          <br>
+      <h2 class="article-title">{{ eachpost.title }}</h2>
+      <p class="article-content">{{ eachpost.content }}</p>
     </div>
   </article>
   

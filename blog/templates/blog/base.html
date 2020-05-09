@@ -22,7 +22,7 @@
         <title>WeWorkOut</title>
     {% endif %}
 </head>
-<body>
+<body class="text-dark">
     <header class="site-header">
       <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" 
         style="font-weight:900;">
@@ -39,6 +39,7 @@
             <!-- Navbar Right Side -->
             <div class="navbar-nav">
               {% if user.is_authenticated %}
+               <a class="nav-item nav-link" href="#">{{user|upper}}</a>
               <a class="nav-item nav-link" href="{% url 'post-create' %}">{{"+Post"|upper}}</a>
                 <a class="nav-item nav-link" href="{% url 'profile' %}">{{"Profile"|upper}}</a>
                 <a class="nav-item nav-link" href="{% url 'logout' %}">{{"Logout"|upper}}</a>

@@ -7,8 +7,9 @@ from django.views.generic import (
     UpdateView,
     DeleteView
 )
-from .models import Post
+from .models import Post, Preference
 from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required
 
 def home(request):
     context = {
@@ -40,6 +41,7 @@ class UserPostListView(ListView):
 
 class PostDetailView(DetailView):
     model = Post
+    context_object_name = 'eachpost'
 
 
 class PostCreateView(LoginRequiredMixin, CreateView):
@@ -83,5 +85,106 @@ def about(request):
     return render(request, 'blog/about.html', {'title': 'About'})
 
 
+@login_required
+def postpreference(request, pk, userpreference):
+        
+    postid = pk
+    if request.method == "POST":
+            eachpost = get_object_or_404(Post, id=postid)
 
+            obj=''
+
+            valueobj=''
+
+            try:
+                    obj= Preference.objects.get(user= request.user, post= eachpost)
+
+                    valueobj= obj.value #value of userpreference
+
+
+                    valueobj= int(valueobj)
+
+                    userpreference= int(userpreference)
+            
+                    if valueobj != userpreference:
+                            obj.delete()
+
+
+                            upref= Preference()
+                            upref.user= request.user
+
+                            upref.post= eachpost
+
+                            upref.value= userpreference
+
+
+                            if userpreference == 1 and valueobj != 1:
+                                    eachpost.likes += 1
+                                    eachpost.dislikes -=1
+                            elif userpreference == 2 and valueobj != 2:
+                                    eachpost.dislikes += 1
+                                    eachpost.likes -= 1
+                            
+
+                            upref.save()
+
+                            eachpost.save()
+                    
+                    
+                            context= {'eachpost': eachpost,
+                              'postid': postid}
+
+                            return render (request, 'blog/post_detail.html', context)
+
+                    elif valueobj == userpreference:
+                            obj.delete()
+                    
+                            if userpreference == 1:
+                                    eachpost.likes -= 1
+                            elif userpreference == 2:
+                                    eachpost.dislikes -= 1
+
+                            eachpost.save()
+
+                            context= {'eachpost': eachpost,
+                              'postid': postid}
+
+                            return render (request, 'blog/post_detail.html', context)
+                            
+                    
+    
+            
+            except Preference.DoesNotExist:
+                    upref= Preference()
+
+                    upref.user= request.user
+
+                    upref.post= eachpost
+
+                    upref.value= userpreference
+
+                    userpreference= int(userpreference)
+
+                    if userpreference == 1:
+                            eachpost.likes += 1
+                    elif userpreference == 2:
+                            eachpost.dislikes +=1
+
+                    upref.save()
+
+                    eachpost.save()                            
+
+
+                    context= {'eachpost': eachpost,
+                      'postid': postid}
+
+                    return render (request, 'blog/post_detail.html', context)
+
+
+    else:
+            eachpost= get_object_or_404(Post, id=postid)
+            context= {'eachpost': eachpost,
+                      'postid': postid}
+
+            return render (request, 'blog/post_detail.html', context)
 

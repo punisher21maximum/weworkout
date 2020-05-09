@@ -11,15 +11,25 @@
         <img style="height:200px" src="{% static 'blog/carousel_img/3.webp' %}" class="card-img-top rounded-0" alt="...">
         <div class="card-body">
           <h6><b><a class="article-title" href="{% url 'post-detail' post.id %}">
-            {{ post.title | truncatechars:23 }}
+            {{ post.title | truncatechars:23 }} 
           </a></b></h6>
-          <i>by</i>
+          <div style="text-align:right;">
+            <i class="fa fa-thumbs-o-up"> {{post.likes}} </i> |
+            <i class="fa fa-thumbs-down"> {{post.dislikes}} </i>
+          </div>
+          
+        
+          <small>by</small>
           <b><a class="article-title" href="{% url 'user-posts' post.author.username %}">
-            {{ post.author|upper }}
+            {{ post.author|upper }} 
           </a></b>
+          <!-- <small class="mr-0">{{post.last_edit|date:"F d"}}</small> -->
+          <br>
+          
           <small class="card-text" style="font:8;">
             {{ post.content | truncatechars:50}}
           </small>
+          
         </div>
       </div>
 <!-- card end -->
