@@ -27,22 +27,26 @@
       <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" 
         style="font-weight:900;">
         <div class="container">
-          <a class="navbar-brand mr-4" href="{% url 'blog-home' %}">WeWorkOut</a>
+          <a class="navbar-brand mr-4 " href="{% url 'blog-home' %}">
+             <img class="d-inline-block " src="{% static 'blog/wwo_icon.png' %}" width="40" height="40"> WeWorkOut</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarToggle">
             <div class="navbar-nav mr-auto">
-              <a class="nav-item nav-link" href="{% url 'blog-home' %}">{{"Home"|upper}}</a>
-              <a class="nav-item nav-link" href="{% url 'blog-about' %}">{{"About"|upper}}</a>
+              <a class="nav-item nav-link " href="{% url 'blog-home' %}">
+              <i class="fa fa-home"></i> {{"Home"|upper}}</a>
+              <a class="nav-item nav-link" href="{% url 'blog-about' %}"><i class="fa fa-info-circle"></i> {{"About"|upper}}</a>
             </div>
             <!-- Navbar Right Side -->
             <div class="navbar-nav">
               {% if user.is_authenticated %}
                <a class="nav-item nav-link" href="#">{{user|upper}}</a>
-              <a class="nav-item nav-link" href="{% url 'post-create' %}">{{"+Post"|upper}}</a>
-                <a class="nav-item nav-link" href="{% url 'profile' %}">{{"Profile"|upper}}</a>
-                <a class="nav-item nav-link" href="{% url 'logout' %}">{{"Logout"|upper}}</a>
+              <a class="nav-item nav-link" href="{% url 'post-create' %}">
+                <i class="fa fa-plus-circle"></i> {{"Post"|upper}}</a>
+                <a class="nav-item nav-link" href="{% url 'profile' %}">
+                  <i class="fa fa-user-circle"></i> {{"Profile"|upper}}</a>
+                <a class="nav-item nav-link" href="{% url 'logout' %}"><i class="fa fa-sign-out"></i> {{"Logout"|upper}} </a>
               {% else %}
               
                 <a class="nav-item nav-link" href="{% url 'login' %}">{{"Login"|upper}}</a>
@@ -69,6 +73,7 @@
               <img class="d-block w-100" src="{% static 'blog/carousel_img/1.webp' %}" height="400px;" alt="First slide">
                   <div class="carousel-caption d-none d-md-block">
                     <h5 class="bg-white">WeWorkOut</h5>
+                    <i class="fa fa-dumbbell"></i>
                     <p>This time is my Time</p>
                   </div>
             </div>
@@ -120,19 +125,23 @@
             <p><b>{{"this time we won't fail"|upper}}</b>
               <ul class="list-group text-dark">
                 <li class="list-group-item " href="{% url 'profile' %}">
-                  <a class=" nav-link link_color" href="{% url 'post-create' %}">{{"Add new Post"|upper}}
+                  <a class=" nav-link link_color" href="{% url 'post-create' %}">
+                   <i class="fa fa-plus-circle"></i>  {{"Post"|upper}}
                   </a>
                 </li>
                 <li class="list-group-item ">
-                  <a class="link_color nav-link" href="{% url 'blog-about' %}">{{"About us"|upper}}
+                  <a class="link_color nav-link" href="{% url 'blog-about' %}">
+                    <i class="fa fa-info-circle"></i> {{"About us"|upper}}
                   </a>
                 </li>
                 <li class="list-group-item ">
-                  <a class="link_color nav-link" href="{% url 'profile' %}">{{"Profile"|upper}}
+                  <a class="link_color nav-link" href="{% url 'profile' %}">
+                     <i class="fa fa-user-circle"></i> {{"Profile"|upper}}
                   </a>
                 </li>
                 <li class="list-group-item ">
-                  <a class="link_color nav-link" href="{% url 'logout' %}">{{"logout"|upper}}
+                  <a class="link_color nav-link" href="{% url 'logout' %}">
+                     <i class="fa fa-sign-out"></i> {{"logout"|upper}}
                   </a>
                 </li>
               </ul>
@@ -153,7 +162,9 @@
                 <div class="col-4 offset-1 col-sm-2">
                     <h5>Links</h5>
                     <ul class="list-unstyled ">
-                        <li><a href="#">Home</a></li>
+                        <li class="fa fa-home">
+                          <a href="#"><i ></i>Home</a>
+                        </li>
                         <li><a href="./aboutus.html">About</a></li>
                         <li><a href="#">Menu</a></li>
                         <li><a href="./contactus.html">Contact</a></li>
