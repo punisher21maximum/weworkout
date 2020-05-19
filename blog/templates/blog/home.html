@@ -27,7 +27,11 @@
           <br>
           
           <small class="card-text" style="font:8;">
-            {{ post.content | truncatechars:50}}
+            <!-- {{ post.content |safe|slice:":65" }} -->
+            <!-- {{ post.content|safe|truncatechars:"65" }} -->
+            <!-- {% with content=post.content|safe %}
+              {{content|truncatechars:"65"}}
+            {% endwith %} -->
           </small>
           
         </div>

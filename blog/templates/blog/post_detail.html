@@ -36,7 +36,9 @@
           <!-- like end -->
           <br>
       <h2 class="article-title">{{ eachpost.title }}</h2>
-      <p class="article-content">{{ eachpost.content }}</p>
+      <p class="article-content">{{ eachpost.content|safe }}</p>
+      <br>
+      <p class="article-content">{{ eachpost.content2|safe }}</p>
     </div>
   <!-- </article> -->
 </div>  

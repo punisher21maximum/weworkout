@@ -3,12 +3,21 @@ from django.utils import timezone
 from django.contrib.auth.models import User
 from django.urls import reverse
 
-from ckeditor.fields import RichTextField
+from ckeditor.fields import RichTextField 
+from ckeditor_uploader.fields import RichTextUploadingField
 class Post(models.Model):
 	author = models.ForeignKey(User, on_delete=models.CASCADE)
 	title = models.CharField(max_length=100)
 	# content = models.TextField()
-	content = RichTextField()
+	content = RichTextUploadingField(blank=True)
+	content2 = RichTextUploadingField(blank=True, config_name='special', 
+                                      external_plugin_resources=[
+                                          ('youtube', 
+                                            '/static/blog/vendor/ckeditor_plugins/youtube/youtube/', 
+                                            'plugin.js', 
+                                            )
+                                      ])
+
 	date_posted = models.DateTimeField(default=timezone.now)
 	last_edit = models.DateTimeField(auto_now=True)
 	likes = models.IntegerField(default=0)

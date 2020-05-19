@@ -8,15 +8,18 @@ from django.conf.urls.static import static
 from users import views as user_views
 
 
+# urlpatterns = [
+
+# 	path('register/', user_views.register, name='register'),
+
+# 	path('', include('blog.urls')),
+#     path('admin/', admin.site.urls),
+    
+# ]
+
 urlpatterns = [
-
-	path('register/', user_views.register, name='register'),
-
-	path('', include('blog.urls')),
-    path('admin/', admin.site.urls),
-]
-
-urlpatterns = [
+    #ckeditor
+    path('ckeditor/', include('ckeditor_uploader.urls')),
     path('admin/', admin.site.urls),
     path('register/', user_views.register, name='register'),
     path('profile/', user_views.profile, name='profile'),

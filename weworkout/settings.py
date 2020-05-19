@@ -124,7 +124,45 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = 'static/'
 STAT = os.path.join(BASE_DIR, 'static')
+# CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
+CKEDITOR_UPLOAD_PATH = "uploads/"
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Custom',
+        'toolbar_Custom': [
+            ['Styles', 'Format', 'Undo', 'Redo', 'Table', 'SpellChecker'],
+            ['Bold', 'Italic', 'Underline', 'Strike', 'Image','HorizontalRule'],
+            ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
+            ['Link', 'Unlink'],
+            ['TextColor', 'BGColor', 'Smiley', 'SpecialChar'],
+            ['RemoveFormat', 'Source', 'CodeSnippet']
+        ],
+        'extraPlugins': 'codesnippet'
+    }
+    ,
+    'special': {
+        'toolbar': 'special',
+        'toolbar_Special': [
+            ['Styles', 'Format', 'Undo', 'Redo', 'Table', 'SpellChecker'],
+            ['Bold', 'Italic', 'Underline', 'Strike', 'Image','HorizontalRule'],
+            ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
+            ['Link', 'Unlink'],
+            ['TextColor', 'BGColor', 'Smiley', 'SpecialChar'],
+            ['RemoveFormat', 'Source', 'CodeSnippet']
+        ],
+        'extraPlugins': 'codesnippet'
+        # 'extraPlugins': ','.join(['codesnippet', 'youtube'])
+    }
+}
+# location /static/ { 
+#     alias /home/mysite/static/; 
+# }      
+# location /media/ { 
+#     alias /home/mysite/media/; 
+# }
+
 #for storing the images
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
