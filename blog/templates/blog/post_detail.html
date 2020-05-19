@@ -1,10 +1,11 @@
 {% extends "blog/base.html" %}
 {% block content %}
-  <article class="media content-section text-dark">
+<div class=" container-fluid col-7 py-3 ">
+  <!-- <article class="media content-section text-dark"> -->
     <img class="rounded-circle article-img" src="{{ eachpost.author.profile.image.url }}">
     <div class="media-body">
       <div class="article-metadata">
-        <a class="mr-2" href="#">{{ eachpost.author }}</a>
+        <a class="mr-2" href="#">{{ eachpost.author|upper }}</a>
         <small class="text-muted">{{ eachpost.date_posted}}</small>
         {% if eachpost.author == user %}
           <div>
@@ -37,8 +38,8 @@
       <h2 class="article-title">{{ eachpost.title }}</h2>
       <p class="article-content">{{ eachpost.content }}</p>
     </div>
-  </article>
-  
+  <!-- </article> -->
+</div>  
            
 
 

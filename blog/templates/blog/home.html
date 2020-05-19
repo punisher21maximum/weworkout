@@ -1,13 +1,13 @@
 {% extends "blog/base.html" %}
 {% load static %}
 {% block content %}
-<div class="container-fluid">
+<div class="container-fluid mx-3">
 	<div class="row">
     {% for post in posts %}
 
 <!-- card -->
-      <div class="card m-2 rounded-0 card_shadow" 
-        style="width: 16rem; "> 
+      <div class="card m-5 rounded-0 card_shadow " 
+        style="width: 20rem; "> 
         <img style="height:200px" src="{% static 'blog/carousel_img/3.webp' %}" class="card-img-top rounded-0" alt="...">
         <div class="card-body">
           <h6><b><a class="article-title" href="{% url 'post-detail' post.id %}">
