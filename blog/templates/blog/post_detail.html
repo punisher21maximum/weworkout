@@ -2,7 +2,7 @@
 {% load mathfilters %}
 {% load social_share %}
 {% block content %}
-<div class=" container-fluid col-7 py-3 ">
+<div class=" container-fluid col-7 py-3 " style="border-left: 1px solid #ffccdd; border-right: 1px solid #ffccdd;">
   <!-- <article class="media content-section text-dark"> -->
     <img class="rounded-circle article-img" src="{{ eachpost.author.profile.image.url }}">
     <div class="media-body">
@@ -23,7 +23,7 @@
               |
           <a href="#" onClick="document.getElementById('dislikebutton').submit()"><i class="fa fa-thumbs-down"> {{eachpost.dislikes}} </i></a> 
       
-          <a href="#"  onClick="document.getElementById('clapbutton').submit()"><i class="fa fa-hand-o-right"> {{eachpost.claps}} </i></a> 
+          <a href="#"  onClick="document.getElementById('clapbutton').submit()"><i class="fa fa-sign-language"> {{eachpost.claps}} </i></a> 
 
 
           <form id="likebutton" method="POST" action="/post/{{eachpost.id}}/preference/1/">

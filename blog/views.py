@@ -24,8 +24,90 @@ class PostListView(ListView):
     context_object_name = 'posts'
     ordering = ['-date_posted']
     paginate_by = 12
+    # queryset = Post.objects.all()[:5]
+
+    def get(self, request, section='none', *args, **kwargs):
+        
+        section_dict = {
+            'startup' : 'Startup Story', 'random' : 'Random Reads',
+            'topn' : 'Top N', 'techcorner' : 'Tech Corner',
+            'covid19' : 'Convid-19', 'compexam' : 'Competetive Exams',
+            'news': 'News'
+        }
+        try: 
+            print('sec',section, section_dict[section])
+        except:
+            pass
+        if section != 'none':
+            self.object_list = Post.objects.filter(section__exact=section_dict[section])
+        else:
+            self.object_list = self.get_queryset()
+
+        
+        allow_empty = self.get_allow_empty()
+        if not allow_empty:
+            # When pagination is enabled and object_list is a queryset,
+            # it's better to do a cheap query than to load the unpaginated
+            # queryset in memory.
+            if self.get_paginate_by(self.object_list) is not None and hasattr(self.object_list, 'exists'):
+                is_empty = not self.object_list.exists()
+            else:
+                is_empty = not self.object_list
+            if is_empty:
+                raise Http404(_('Empty list and “%(class_name)s.allow_empty” is False.') % {
+                    'class_name': self.__class__.__name__,
+                })
+        context = self.get_context_data()
+        return self.render_to_response(context)
+
+    # def get_queryset(self):
+    #     return Post.objects.filter(section__exact='Startup Story')
+
+    
+
+# # Sections
+# class StartupListView(ListView):
+#     model = Post
+#     template_name = 'blog/home.html'  # <app>/<model>_<viewtype>.html
+#     context_object_name = 'posts'
+#     ordering = ['-date_posted']
+#     paginate_by = 12
+
+#     def get_queryset(self):
+#         return Post.objects.filter(section__exact='Startup Story')
+
+ 
+# class RandomListView(ListView):
+#     model = Post
+#     template_name = 'blog/home.html'  # <app>/<model>_<viewtype>.html
+#     context_object_name = 'posts'
+#     ordering = ['-date_posted']
+#     paginate_by = 12
+
+#     def get_queryset(self):
+#         return Post.objects.filter(section__exact='Random Reads')
 
 
+ 
+# class TopListView(ListView):
+#     model = Post
+#     template_name = 'blog/home.html'  # <app>/<model>_<viewtype>.html
+#     context_object_name = 'posts'
+#     ordering = ['-date_posted']
+#     paginate_by = 12
+
+#     def get_queryset(self):
+#         return Post.objects.filter(section__exact='Top N')
+
+# class TechListView(ListView):
+#     model = Post
+#     template_name = 'blog/home.html'  # <app>/<model>_<viewtype>.html
+#     context_object_name = 'posts'
+#     ordering = ['-date_posted']
+#     paginate_by = 12
+
+#     def get_queryset(self):
+#         return Post.objects.filter(section__exact='Tech Corner')
 
 
 class UserPostListView(ListView):
@@ -46,7 +128,7 @@ class PostDetailView(DetailView):
 
 class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
-    fields = ['title', 'content', 'content2']
+    fields = ['title', 'section', 'content', 'content2']
 
     def form_valid(self, form):
         form.instance.author = self.request.user
@@ -57,7 +139,7 @@ class PostCreateView(LoginRequiredMixin, CreateView):
 
 class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Post
-    fields = ['title', 'content', 'content2']
+    fields = ['title', 'section', 'content', 'content2']
 
     def form_valid(self, form):
         form.instance.author = self.request.user
