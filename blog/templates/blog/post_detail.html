@@ -1,11 +1,13 @@
 {% extends "blog/base.html" %}
+{% load mathfilters %}
+{% load social_share %}
 {% block content %}
 <div class=" container-fluid col-7 py-3 ">
   <!-- <article class="media content-section text-dark"> -->
     <img class="rounded-circle article-img" src="{{ eachpost.author.profile.image.url }}">
     <div class="media-body">
       <div class="article-metadata">
-        <a class="mr-2" href="#">{{ eachpost.author|upper }}</a>
+        <a id="page_top" class="mr-2" href="#">{{ eachpost.author|upper }}</a>
         <small class="text-muted">{{ eachpost.date_posted}}</small>
         {% if eachpost.author == user %}
           <div>
@@ -21,6 +23,7 @@
               |
           <a href="#" onClick="document.getElementById('dislikebutton').submit()"><i class="fa fa-thumbs-down"> {{eachpost.dislikes}} </i></a> 
       
+          <a href="#"  onClick="document.getElementById('clapbutton').submit()"><i class="fa fa-hand-o-right"> {{eachpost.claps}} </i></a> 
 
 
           <form id="likebutton" method="POST" action="/post/{{eachpost.id}}/preference/1/">
@@ -33,7 +36,11 @@
           <input type="hidden">
           </form>
 
-          <!-- like end -->
+          <form id="clapbutton" method="POST" action="/post/{{eachpost.id}}/preference/3/">
+            {% csrf_token %}
+            <input type="hidden">
+          </form>
+           <!-- like end -->
           <br>
       <h2 class="article-title">{{ eachpost.title }}</h2>
       <p class="article-content">{{ eachpost.content|safe }}</p>

@@ -105,8 +105,17 @@ def postpreference(request, pk, userpreference):
                     valueobj= int(valueobj)
 
                     userpreference= int(userpreference)
-            
-                    if valueobj != userpreference:
+
+                    if userpreference == 3:
+                            eachpost.claps += 1
+                            eachpost.save()
+
+                            context= {'eachpost': eachpost,
+                              'postid': postid}
+
+                            return render (request, 'blog/post_detail.html', context)
+                            
+                    elif valueobj != userpreference:
                             obj.delete()
 
 
@@ -169,6 +178,8 @@ def postpreference(request, pk, userpreference):
                             eachpost.likes += 1
                     elif userpreference == 2:
                             eachpost.dislikes +=1
+                    elif userpreference == 3:
+                            eachpost.claps += 1
 
                     upref.save()
 

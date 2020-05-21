@@ -24,29 +24,29 @@
 </head>
 <body class="text-dark">
     <header class="site-header">
-      <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" 
-        style="font-weight:900;">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top py-0" 
+        style="font-weight:750; background-color: #990033; opacity:1.0">
         <div class="container">
           <a class="navbar-brand mr-4 " href="{% url 'blog-home' %}">
-             <img class="d-inline-block " src="{% static 'blog/wwo_icon.png' %}" width="40" height="40"> WeWorkOut</a>
+             <img class="d-inline-block " src="{% static 'blog/logo16.png' %}" width="80" height="80"> AadhaTedha</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarToggle">
             <div class="navbar-nav mr-auto">
-              <a class="nav-item nav-link " href="{% url 'blog-home' %}">
-              <i class="fa fa-home"></i> {{"Home"|upper}}</a>
-              <a class="nav-item nav-link" href="{% url 'blog-about' %}"><i class="fa fa-info-circle"></i> {{"About"|upper}}</a>
+              <a class="nav-item nav-link text-white" href="{% url 'blog-home' %}">
+              <i class="fa fa-home "></i> {{"Home"|upper}}</a>
+              <a class="nav-item nav-link text-white" href="{% url 'blog-about' %}"><i class="fa fa-info-circle"></i> {{"About"|upper}}</a>
             </div>
             <!-- Navbar Right Side -->
             <div class="navbar-nav">
               {% if user.is_authenticated %}
-               <a class="nav-item nav-link" href="#">{{user|upper}}</a>
-              <a class="nav-item nav-link" href="{% url 'post-create' %}">
+               <a class="nav-item nav-link text-white" href="#">{{user|upper}}</a>
+              <a class="nav-item nav-link text-white" href="{% url 'post-create' %}">
                 <i class="fa fa-plus-circle"></i> {{"Post"|upper}}</a>
-                <a class="nav-item nav-link" href="{% url 'profile' %}">
+                <a class="nav-item nav-link text-white" href="{% url 'profile' %}">
                   <i class="fa fa-user-circle"></i> {{"Profile"|upper}}</a>
-                <a class="nav-item nav-link" href="{% url 'logout' %}"><i class="fa fa-sign-out"></i> {{"Logout"|upper}} </a>
+                <a class="nav-item nav-link text-white" href="{% url 'logout' %}"><i class="fa fa-sign-out"></i> {{"Logout"|upper}} </a>
               {% else %}
               
                 <a class="nav-item nav-link" href="{% url 'login' %}">{{"Login"|upper}}</a>

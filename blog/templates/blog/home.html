@@ -1,5 +1,7 @@
 {% extends "blog/base.html" %}
 {% load static %}
+{% load mathfilters %}
+{% load social_share %}
 {% block content %}
 <div class="container-fluid mx-3">
 	<div class="row">
@@ -11,7 +13,7 @@
         <img style="height:200px" src="{% static 'blog/carousel_img/3.webp' %}" class="card-img-top rounded-0" alt="...">
         <div class="card-body">
           <h6><b><a class="article-title" href="{% url 'post-detail' post.id %}">
-            {{ post.title | truncatechars:23 }} 
+            {{ post.title | truncatechars:100 }} 
           </a></b></h6>
           <div style="text-align:right;">
             <i class="fa fa-thumbs-o-up"> {{post.likes}} </i> |
@@ -20,14 +22,17 @@
           
         
           <small>by</small>
-          <b><a class="article-title" href="{% url 'user-posts' post.author.username %}">
+          <a class="article-title" href="{% url 'user-posts' post.author.username %}">
             {{ post.author|upper }} 
-          </a></b>
-          <!-- <small class="mr-0">{{post.last_edit|date:"F d"}}</small> -->
+          </a> 
+          <small class="mr-0">{{post.last_edit|date:"F d"}}</small>
           <br>
           
           <small class="card-text" style="font:8;">
-            <!-- {{ post.content |safe|slice:":65" }} -->
+            
+            <!-- {{post.date_posted|date:"F d"}}  |  -->
+            {{post.date_posted|timesince}}  ago |
+            {{ post.content | wordcount | intdiv:100 }} min read
             <!-- {{ post.content|safe|truncatechars:"65" }} -->
             <!-- {% with content=post.content|safe %}
               {{content|truncatechars:"65"}}
