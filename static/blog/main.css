@@ -155,7 +155,7 @@ a.nounderline{
 }
 
 .add_post{
-  font-weight: 900;
+  /* font-weight: 900; */
   color:white;
 }
 
@@ -166,4 +166,12 @@ a.nounderline{
   border: 1px solid #dddddd;
   border-radius: 3px;
   margin-bottom: 50px;
+}
+
+.custom_form
+{
+  color:white;
+  background-color:#b3003b;
+  margin-bottom: 2px;
+  padding: 3px;
 }
