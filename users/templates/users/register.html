@@ -1,20 +1,28 @@
 {% extends "blog/base.html" %}
 {% load crispy_forms_tags %}
+{% load static %}
 {% block content %}
-    <div class="content-section">
-        <form method="POST">
+<div class="col-12  offset-md-3  col-md-6   add_post   text-white p-3 mb-2"
+    style="color:white;   background-color:#b3003b;">
+        <form method="POST" >
             {% csrf_token %}
             <fieldset class="form-group">
-                <legend class="border-bottom mb-4">Join Today</legend>
+                <legend class="border-bottom mb-4">Join Today
+                    <img style="text-align: right;" class="d-inline-block " src="{% static 'blog/logo16.png' %}" width="100" height="100">
+                AadhaTedha
+                </legend>
                 {{ form|crispy }}
             </fieldset>
             <div class="form-group">
-                <button class="btn btn-outline-info" type="submit">Sign Up</button>
+                <button class="btn btn-default btn-block " type="submit" style="color:#b3003b;"><b>Sign Up</b></button>
             </div>
+      
         </form>
-        <div class="border-top pt-3">
-            <small class="text-muted">
-                Already Have An Account? <a class="ml-2" href="#">Sign In</a>
+        
+
+        <div class="border-top pt-3 text-white" style="text-align: center;">
+            <small class="text-muted ">
+                <p class="text-white">Already Have An Account?  <a class="ml-2 text-white" href="{% url 'login' %}"><b>Login</b></a> </p>
             </small>
         </div>
     </div>

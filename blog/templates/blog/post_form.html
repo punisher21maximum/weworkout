@@ -3,9 +3,12 @@
 {% block content %}
 
  
-    <div class="col-8  add_post container bg-dark text-white pb-3 mb-2" 
-    style="font-weight: 900;">
-        <form method="POST">
+    <div class="col-8  add_post container  text-white pb-3 mb-2" 
+    style="font-weight: 900; background-color: #cc0044;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);">
+            <form method="POST">
             {% csrf_token %}
             <fieldset class="form-group">
                 <legend class="border-bottom mb-4"><b>Blog Post</b></legend>

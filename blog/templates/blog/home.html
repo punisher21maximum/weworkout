@@ -7,6 +7,12 @@
 	<div class="row">
     {% for post in posts %}
 
+    <!-- <div class="row">
+      <br>
+      {% if forloop.counter|mod:3 == 1 %}
+        <h5> {{forloop.counter}} {% cycle 'row1' 'row2' %}</h5>
+      {% endif %}
+    </div> -->
 <!-- card -->
       <div class="card m-5 rounded-0 card_shadow " 
         style="width: 20rem; "> 
@@ -19,7 +25,7 @@
             <i class="fa fa-thumbs-o-up"> {{post.likes}} </i> |
             <i class="fa fa-sign-language"> {{post.claps}} </i>
           </div>
-          {{forloop.counter}}
+          {{forloop.counter}} <br>
         
           <small>by</small>
           <a class="article-title" href="{% url 'user-posts' post.author.username %}">
@@ -45,7 +51,7 @@
         </div>
       </div>
 <!-- card end -->
-
+      
     {% endfor %}
    	</div>
     <div class="my-4">

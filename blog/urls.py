@@ -7,14 +7,14 @@ from .views import (
     PostUpdateView,
     PostDeleteView,
     UserPostListView,
-    # StartupListView
+    SectionListView
 )
 from . import views
 
 urlpatterns = [
     path('home', PostListView.as_view(), name='blog-home'),
     #section
-    path('home/<str:section>', PostListView.as_view(), name='section-home'),
+    path('home/<str:section>', SectionListView.as_view(), name='section-home'),
     #section end
     path('user/<str:username>', UserPostListView.as_view(), name='user-posts'),
     path('post/<int:pk>/', PostDetailView.as_view(), name='post-detail'),

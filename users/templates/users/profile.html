@@ -1,7 +1,10 @@
 {% extends "blog/base.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
-    <div class="content-section">
+    <div class="col-4 content-section add_post container  text-white pb-3 mb-2"
+    style="-webkit-box-shadow: -1px 4px 18px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 4px 18px 0px rgba(0,0,0,0.75);
+    box-shadow: -1px 4px 18px 0px rgba(0,0,0,0.75);">
       <div class="media">
         <img class="rounded-circle account-img" src="{{ user.profile.image.url }}">
         <div class="media-body">

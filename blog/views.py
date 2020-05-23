@@ -16,11 +16,18 @@ def home(request):
         'posts': Post.objects.all()
     }
     return render(request, 'blog/home.html', context)
-
-
 class PostListView(ListView):
     model = Post
     template_name = 'blog/home.html'  # <app>/<model>_<viewtype>.html
+    context_object_name = 'posts'
+    # ordering = ['-date_posted']
+    paginate_by = 12
+    
+    queryset = Post.objects.filter(section__exact="Random Reads")[:3] | Post.objects.filter(section__exact="Startup Story")[:3] | Post.objects.filter(section__exact="Tech Corner")[:3] | Post.objects.filter(section__exact="Convid-19")[:3] | Post.objects.filter(section__exact="Competetive Exams")[:3] | Post.objects.filter(section__exact="News")[:3]
+
+class SectionListView(ListView):
+    model = Post
+    template_name = 'blog/section-home.html'  # <app>/<model>_<viewtype>.html
     context_object_name = 'posts'
     ordering = ['-date_posted']
     paginate_by = 12
@@ -63,51 +70,7 @@ class PostListView(ListView):
     # def get_queryset(self):
     #     return Post.objects.filter(section__exact='Startup Story')
 
-    
 
-# # Sections
-# class StartupListView(ListView):
-#     model = Post
-#     template_name = 'blog/home.html'  # <app>/<model>_<viewtype>.html
-#     context_object_name = 'posts'
-#     ordering = ['-date_posted']
-#     paginate_by = 12
-
-#     def get_queryset(self):
-#         return Post.objects.filter(section__exact='Startup Story')
-
- 
-# class RandomListView(ListView):
-#     model = Post
-#     template_name = 'blog/home.html'  # <app>/<model>_<viewtype>.html
-#     context_object_name = 'posts'
-#     ordering = ['-date_posted']
-#     paginate_by = 12
-
-#     def get_queryset(self):
-#         return Post.objects.filter(section__exact='Random Reads')
-
-
- 
-# class TopListView(ListView):
-#     model = Post
-#     template_name = 'blog/home.html'  # <app>/<model>_<viewtype>.html
-#     context_object_name = 'posts'
-#     ordering = ['-date_posted']
-#     paginate_by = 12
-
-#     def get_queryset(self):
-#         return Post.objects.filter(section__exact='Top N')
-
-# class TechListView(ListView):
-#     model = Post
-#     template_name = 'blog/home.html'  # <app>/<model>_<viewtype>.html
-#     context_object_name = 'posts'
-#     ordering = ['-date_posted']
-#     paginate_by = 12
-
-#     def get_queryset(self):
-#         return Post.objects.filter(section__exact='Tech Corner')
 
 
 class UserPostListView(ListView):
@@ -128,7 +91,7 @@ class PostDetailView(DetailView):
 
 class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
-    fields = ['title', 'section', 'content', 'content2']
+    fields = ['title', 'section', 'content']#, 'content2']
 
     def form_valid(self, form):
         form.instance.author = self.request.user
@@ -139,7 +102,7 @@ class PostCreateView(LoginRequiredMixin, CreateView):
 
 class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Post
-    fields = ['title', 'section', 'content', 'content2']
+    fields = ['title', 'section', 'content']#, 'content2']
 
     def form_valid(self, form):
         form.instance.author = self.request.user
@@ -164,6 +127,16 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
 
 def about(request):
+    from django.core.mail import send_mail
+
+    send_mail(
+        'Subject here',
+        'Here is the message.',
+        'vishal7x7@gmail.com',
+        ['vishal7x7@gmail.com'],
+        fail_silently=False,
+    )
+    print('sent')
     return render(request, 'blog/about.html', {'title': 'About'})
 
 

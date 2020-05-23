@@ -1,9 +1,23 @@
 {% extends "blog/base.html" %}
+{% load static %}
 {% block content %}
-    <h2>You have been logged out</h2>
+
+<div class="col-12  offset-md-4  col-md-4 content-section add_post   text-white pb-3 mb-2"
+style="text-align: center;  background-color:#b3003b;">
+    <h2 class="text-white m-0 p-0" style="  text-align: center;">Aadha Tedha</h2>
+    
+    <img class="d-inline-block m-0 p-0" src="{% static 'blog/logo16.png' %}" width="300" height="300">
+    <h4 class="text-white">You have been logged out</h4>
     <div class="border-top pt-3">
-        <small class="text-muted">
-            <a href="{% url 'login' %}">Log In Again</a>
-        </small>
+        <h6 class="text-muted">
+            <a class="text-white" href="{% url 'login' %}">Log In Again</a>
+        </h6>
     </div>
+    <div class="  pt-3 text-white" style="text-align: center;">
+        <h6 class="text-muted ">
+            <a class="ml-2 text-white" href="{% url 'register' %}"><b>Register</b></a>  
+        </h6>
+    </div>
+</div>
+    
 {% endblock content %}

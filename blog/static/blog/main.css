@@ -82,9 +82,19 @@ a.article-title:hover {
 
 .footer {
   color: white;
-  background-color: black;
+  background-color: #80002a;
   margin: 0px auto;
-  padding: 20px 0px; }
+  padding: 20px 0px; 
+  font-weight: 400;
+}
+/* 
+.footer2 {
+  color: white;
+  background-color: #cc0044;
+  margin: 0px auto;
+  padding: 20px 0px; 
+  font-weight: 400;
+} */
 
 address {
   font-size: 80%;
@@ -131,7 +141,7 @@ a.nounderline{
 
 .btn_pagi_outline {
   color : black;
-  background-color: #ffcc00;
+  background-color: #80002a;
   border: 2px solid black; 
 }
 
