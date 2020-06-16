@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="shortcut icon" href="http://sstatic.net/stackoverflow/img/favicon.ico">
+    <!-- <link rel="shortcut icon" href="http://sstatic.net/stackoverflow/img/favicon.ico"> -->
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -42,8 +42,11 @@
               <a class="nav-item nav-link text-white" href="{% url 'section-home' 'techcorner' %}"> {{"Tech corner"|upper}}</a>  &nbsp &nbsp
               <a class="nav-item nav-link text-white" href="{% url 'section-home' 'covid19' %}"> {{"Covid19"|upper}}</a> &nbsp &nbsp
               <a class="nav-item nav-link text-white" href="{% url 'section-home' 'compexam' %}"> {{"Exams"|upper}}</a> &nbsp &nbsp
-              <a class="nav-item nav-link text-white" href="{% url 'section-home' 'news' %}"> {{"News"|upper}}</a>
-
+              <a class="nav-item nav-link text-white" href="{% url 'section-home' 'news' %}"> {{"News"|upper}}</a> &nbsp &nbsp
+              {% if user.is_authenticated %}
+                    <a class="nav-item nav-link text-white" href="{% url 'post-create' %}">
+                    <i class="fa fa-plus-circle"></i> {{"Post"|upper}}</a>
+              {% endif %}
               
             </div>
             
@@ -57,18 +60,28 @@
                 
                 <div class="dropdown-menu pl-3" aria-labelledby="navbarDropdownMenuLink" style="font-weight:750; background-color: #990033; opacity:1.0">
                   {% if user.is_authenticated %}
-                    <a class="nav-item nav-link text-white" href="#">{{user|upper}}</a>
+                    <a class="nav-item nav-link text-dark" href="#">{{user|upper}}</a>
                     <a class="nav-item nav-link text-white" href="{% url 'post-create' %}">
                     <i class="fa fa-plus-circle"></i> {{"Post"|upper}}</a>
                     <a class="nav-item nav-link text-white" href="{% url 'profile' %}">
                     <i class="fa fa-user-circle"></i> {{"Profile"|upper}}</a>
-                    <a class="nav-item nav-link text-white" href="{% url 'password_reset' %}"><i class="fa fa-sign-out"></i> {{"password reset"|upper}} </a>
-                    <a class="nav-item nav-link text-white" href="{% url 'password_change' %}"><i class="fa fa-sign-out"></i> {{"password change"|upper}} </a>
-                    <a class="nav-item nav-link text-white" href="{% url 'logout' %}"><i class="fa fa-sign-out"></i> {{"Logout"|upper}} </a>
+                    <a class="nav-item nav-link text-white" href="{% url 'blog-about' %}">
+                      <i class="fa fa-address-card"></i>  {{"About"|upper}} </a>
+                    <a class="nav-item nav-link text-white" href="{% url 'password_reset' %}">
+                      <i class="fa fa-key"></i> {{"password reset"|upper}} </a>
+                    <a class="nav-item nav-link text-white" href="{% url 'password_change' %}">
+                      <i class="fa fa-key"></i> {{"password change"|upper}} </a>
+                    <a class="nav-item nav-link text-white" href="{% url 'logout' %}">
+                      <i class="fa fa-sign-out"></i> {{"Logout"|upper}} </a>
                   {% else %}
+                    <a class="nav-item nav-link text-white" href="{% url 'blog-about' %}">  {{"About"|upper}} </a>
                     <a class="nav-item nav-link" href="{% url 'login' %}">{{"Login"|upper}}</a>
                     <a class="nav-item nav-link" href="{% url 'register' %}">{{"Register"|upper}}</a>
-                  {% endif %}
+                    <!-- <a class="nav-item nav-link text-white" href="{% url 'password_reset' %}"><i class="fa fa-sign-out"></i> {{"password reset"|upper}} </a> -->
+
+                    {% endif %}
+                   
+
                 </div>
               </li>
               
@@ -180,7 +193,7 @@
     </main>
 
 
-        <footer class="footer">
+        <!-- <footer class="footer">
         <div >
             <div class="row">             
                 <div class="col-4 offset-1 col-sm-2">
@@ -222,24 +235,24 @@
                 </div>
            </div>
         </div>
-    </footer>
-    <footer class="footer2" style="background-color: #330000;">
+    </footer> -->
+    <footer class="footer2 py-3" style="background-color: #330000;">
       <div >
           <div class="row">             
               <div class="col-4 offset-1 col-sm-2">
                   <h5>Aadha Tedha</h5>
               </div>
               <div class="col-7 col-sm-5 address">
-                  <h5>Product of AlphaFlamingo</h5>
+                  <h5>AlphaFlamingo</h5>
                   
               </div>
               
          </div>
-         <div class="row justify-content-center">             
+         <!-- <div class="row justify-content-center">             
               <div class="col-auto">
                   <p>Tommorow is ours</p>
               </div>
-         </div>
+         </div> -->
       </div>
   </footer>
     <!-- Optional JavaScript -->

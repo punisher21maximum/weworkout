@@ -47,3 +47,12 @@ class Preference(models.Model):
 
 	def __str__(self):
 		return str(self.user)+' : '+str(self.post)+' : '+str(self.value)
+
+class AboutUs(models.Model):
+	aboutAT = RichTextUploadingField(blank=True)
+
+	def __str__(self):
+	    return 'aboutAT'
+
+
+

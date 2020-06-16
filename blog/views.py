@@ -7,7 +7,7 @@ from django.views.generic import (
     UpdateView,
     DeleteView
 )
-from .models import Post, Preference
+from .models import Post, Preference, AboutUs
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 
@@ -23,7 +23,7 @@ class PostListView(ListView):
     # ordering = ['-date_posted']
     paginate_by = 12
     
-    queryset = Post.objects.filter(section__exact="Random Reads")[:3] | Post.objects.filter(section__exact="Startup Story")[:3] | Post.objects.filter(section__exact="Tech Corner")[:3] | Post.objects.filter(section__exact="Convid-19")[:3] | Post.objects.filter(section__exact="Competetive Exams")[:3] | Post.objects.filter(section__exact="News")[:3]
+    queryset = Post.objects.filter(section__exact="Random Reads")[:3] #| Post.objects.filter(section__exact="Startup Story")[:3] | Post.objects.filter(section__exact="Tech Corner")[:3] | Post.objects.filter(section__exact="Convid-19")[:3] | Post.objects.filter(section__exact="Competetive Exams")[:3] | Post.objects.filter(section__exact="News")[:3]
 
 class SectionListView(ListView):
     model = Post
@@ -124,20 +124,12 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         if self.request.user == post.author:
             return True
         return False
-
-
 def about(request):
-    from django.core.mail import send_mail
-
-    send_mail(
-        'Subject here',
-        'Here is the message.',
-        'vishal7x7@gmail.com',
-        ['vishal7x7@gmail.com'],
-        fail_silently=False,
-    )
-    print('sent')
     return render(request, 'blog/about.html', {'title': 'About'})
+
+def about_detail(request):
+    context = {'about_us_page' : AboutUs.objects.all().first()}    
+    return render(request, 'blog/about.html', context)
 
 
 @login_required

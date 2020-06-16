@@ -1,0 +1,672 @@
+vsingh@Gaurav:~$ pwd
+/home/vsingh
+vsingh@Gaurav:~$ ls -ls
+total 1828
+1828 -rw-rw-rw- 1 vsingh vsingh 1868059 May  3 00:35 get-pip.py
+vsingh@Gaurav:~$ ls /mnt/
+c  d  g  v
+vsingh@Gaurav:~$ cd /mnt/c
+vsingh@Gaurav:/mnt/c$ ls
+ls: cannot access 'hiberfil.sys': Permission denied
+ls: cannot access 'pagefile.sys': Permission denied
+ls: cannot access 'swapfile.sys': Permission denied
+'$360Section'                 DRIVERS                  'Program Files'               Voices             found.002
+'$AV_ASW'                    'Documents and Settings'  'Program Files (x86)'         Windows            ftconfig.ini
+'$GetCurrent'                 Downloads                 ProgramData                  Windows10Upgrade   hiberfil.sys
+'$Recycle.Bin'                END                       PyPDF2-1.26.0               'avast! sandbox'    ldiag
+ 74f6a6eb342eb4a6e76f5251a0   Intel                     Python27                     bootTel.dat        new
+ AMD                          Keil                      Recovery                     bootmgr            oraclexe
+ AMTAG.BIN                    Libero                    SynLM                        cookies.sqlite     oro
+ Actelprj                     MSOCache                 'System Volume Information'   data               pagefile.sys
+ BOOTNXT                      MinGW                     TC                           dir                swapfile.sys
+ Boot                         OneDriveTemp              Temp                         efi                work
+ Config.Msi                   PerfLogs                  UserGuidePDF                 found.000
+ CoreConsole_v1.4             Perl                      Users                        found.001
+vsingh@Gaurav:/mnt/c$ cd User
+-bash: cd: User: No such file or directory
+vsingh@Gaurav:/mnt/c$ cd Users
+vsingh@Gaurav:/mnt/c/Users$ ls
+ls: cannot read symbolic link 'All Users': Permission denied
+ls: cannot read symbolic link 'Default User': Permission denied
+ Administrator  'All Users'   Default  'Default User'   Gaurav   Public   Saurabh   TEMP   desktop.ini
+vsingh@Gaurav:/mnt/c/Users$ ls -la
+ls: cannot read symbolic link 'All Users': Permission denied
+ls: cannot read symbolic link 'Default User': Permission denied
+total 0
+drwxrwxrwx 1 vsingh vsingh 4096 Dec  1 11:32  .
+drwxrwxrwx 1 vsingh vsingh 4096 May 22 18:26  ..
+drwxrwxrwx 1 vsingh vsingh 4096 May 27 21:18  Administrator
+lrwxrwxrwx 1 vsingh vsingh   18 Mar 19  2019 'All Users'
+drwxrwxrwx 1 vsingh vsingh 4096 Dec  1 12:27  Default
+lrwxrwxrwx 1 vsingh vsingh   20 Mar 19  2019 'Default User'
+drwxrwxrwx 1 vsingh vsingh 4096 May 15 11:02  Gaurav
+drwxrwxrwx 1 vsingh vsingh 4096 Dec  1 15:21  Public
+drwxrwxrwx 1 vsingh vsingh 4096 May 15 11:02  Saurabh
+drwxrwxrwx 1 vsingh vsingh 4096 Apr 11  2018  TEMP
+-rwxrwxrwx 1 vsingh vsingh  174 Mar 19  2019  desktop.ini
+vsingh@Gaurav:/mnt/c/Users$ cd Gaurav
+vsingh@Gaurav:/mnt/c/Users/Gaurav$ ls -la
+ls: cannot read symbolic link 'Application Data': Permission denied
+ls: cannot read symbolic link 'Cookies': Permission denied
+ls: cannot read symbolic link 'Local Settings': Permission denied
+ls: cannot read symbolic link 'My Documents': Permission denied
+ls: cannot read symbolic link 'NetHood': Permission denied
+ls: cannot read symbolic link 'PrintHood': Permission denied
+ls: cannot read symbolic link 'Recent': Permission denied
+ls: cannot read symbolic link 'SendTo': Permission denied
+ls: cannot read symbolic link 'Start Menu': Permission denied
+ls: cannot read symbolic link 'Templates': Permission denied
+total 3292
+drwxrwxrwx 1 vsingh vsingh    4096 May 15 11:02  .
+drwxrwxrwx 1 vsingh vsingh    4096 Dec  1 11:32  ..
+drwxrwxrwx 1 vsingh vsingh    4096 Nov  4  2018 '3D Objects'
+drwxrwxrwx 1 vsingh vsingh    4096 Dec  1 11:33  AppData
+lrwxrwxrwx 1 vsingh vsingh      35 Dec  1 11:32 'Application Data'
+drwxrwxrwx 1 vsingh vsingh    4096 Nov  4  2018  Contacts
+lrwxrwxrwx 1 vsingh vsingh      63 Dec  1 11:32  Cookies
+drwxrwxrwx 1 vsingh vsingh    4096 Dec  1 12:23  Desktop
+drwxrwxrwx 1 vsingh vsingh    4096 Dec  1 11:55  Documents
+drwxrwxrwx 1 vsingh vsingh    4096 Nov  4  2018  Downloads
+drwxrwxrwx 1 vsingh vsingh    4096 Dec  1 11:37  Favorites
+drwxrwxrwx 1 vsingh vsingh    4096 Nov 14  2018  IntelGraphicsProfiles
+drwxrwxrwx 1 vsingh vsingh    4096 Dec  1 11:37  Links
+lrwxrwxrwx 1 vsingh vsingh      33 Dec  1 11:32 'Local Settings'
+drwxrwxrwx 1 vsingh vsingh    4096 Nov  4  2018  MicrosoftEdgeBackups
+drwxrwxrwx 1 vsingh vsingh    4096 Nov  4  2018  Music
+lrwxrwxrwx 1 vsingh vsingh      29 Dec  1 11:32 'My Documents'
+-rwxrwxrwx 1 vsingh vsingh 1572864 May 16 11:34  NTUSER.DAT
+-rwxrwxrwx 1 vsingh vsingh   65536 Dec  1 11:32  NTUSER.DAT{fd9a35db-49fe-11e9-aa2c-248a07783950}.TM.blf
+-rwxrwxrwx 1 vsingh vsingh  524288 Dec  1 11:32  NTUSER.DAT{fd9a35db-49fe-11e9-aa2c-248a07783950}.TMContainer00000000000000000001.regtrans-ms
+-rwxrwxrwx 1 vsingh vsingh  524288 Dec  1 11:32  NTUSER.DAT{fd9a35db-49fe-11e9-aa2c-248a07783950}.TMContainer00000000000000000002.regtrans-ms
+lrwxrwxrwx 1 vsingh vsingh      71 Dec  1 11:32  NetHood
+drwxrwxrwx 1 vsingh vsingh    4096 Nov 15  2018  OneDrive
+drwxrwxrwx 1 vsingh vsingh    4096 Nov  4  2018  Pictures
+lrwxrwxrwx 1 vsingh vsingh      71 Dec  1 11:32  PrintHood
+lrwxrwxrwx 1 vsingh vsingh      60 Dec  1 11:32  Recent
+drwxrwxrwx 1 vsingh vsingh    4096 Nov  4  2018 'Saved Games'
+drwxrwxrwx 1 vsingh vsingh    4096 Nov  4  2018  Searches
+lrwxrwxrwx 1 vsingh vsingh      60 Dec  1 11:32  SendTo
+lrwxrwxrwx 1 vsingh vsingh      64 Dec  1 11:32 'Start Menu'
+lrwxrwxrwx 1 vsingh vsingh      63 Dec  1 11:32  Templates
+drwxrwxrwx 1 vsingh vsingh    4096 Nov  4  2018  Videos
+-rwxrwxrwx 1 vsingh vsingh  278528 Dec  1 11:32  ntuser.dat.LOG1
+-rwxrwxrwx 1 vsingh vsingh  403456 Dec  1 11:32  ntuser.dat.LOG2
+vsingh@Gaurav:/mnt/c/Users/Gaurav$ cd Desktop
+vsingh@Gaurav:/mnt/c/Users/Gaurav/Desktop$ ls -la
+total 8
+drwxrwxrwx 1 vsingh vsingh 4096 Dec  1 12:23  .
+drwxrwxrwx 1 vsingh vsingh 4096 May 15 11:02  ..
+-rwxrwxrwx 1 vsingh vsingh 2344 Nov  4  2018 'Google Chrome.lnk'
+-rwxrwxrwx 1 vsingh vsingh 1417 Nov  4  2018 'Microsoft Edge.lnk'
+-rwxrwxrwx 1 vsingh vsingh    0 Nov 13  2018  Notes.txt
+-rwxrwxrwx 1 vsingh vsingh  282 Nov  4  2018  desktop.ini
+vsingh@Gaurav:/mnt/c/Users/Gaurav/Desktop$ touch vishal.txt
+vsingh@Gaurav:/mnt/c/Users/Gaurav/Desktop$ ls -la
+total 8
+drwxrwxrwx 1 vsingh vsingh 4096 May 27 23:15  .
+drwxrwxrwx 1 vsingh vsingh 4096 May 15 11:02  ..
+-rwxrwxrwx 1 vsingh vsingh 2344 Nov  4  2018 'Google Chrome.lnk'
+-rwxrwxrwx 1 vsingh vsingh 1417 Nov  4  2018 'Microsoft Edge.lnk'
+-rwxrwxrwx 1 vsingh vsingh    0 Nov 13  2018  Notes.txt
+-rwxrwxrwx 1 vsingh vsingh  282 Nov  4  2018  desktop.ini
+-rwxrwxrwx 1 vsingh vsingh    0 May 27 23:15  vishal.txt
+vsingh@Gaurav:/mnt/c/Users/Gaurav/Desktop$ cd ..
+vsingh@Gaurav:/mnt/c/Users/Gaurav$ ls -la
+ls: cannot read symbolic link 'Application Data': Permission denied
+ls: cannot read symbolic link 'Cookies': Permission denied
+ls: cannot read symbolic link 'Local Settings': Permission denied
+ls: cannot read symbolic link 'My Documents': Permission denied
+ls: cannot read symbolic link 'NetHood': Permission denied
+ls: cannot read symbolic link 'PrintHood': Permission denied
+ls: cannot read symbolic link 'Recent': Permission denied
+ls: cannot read symbolic link 'SendTo': Permission denied
+ls: cannot read symbolic link 'Start Menu': Permission denied
+ls: cannot read symbolic link 'Templates': Permission denied
+total 3292
+drwxrwxrwx 1 vsingh vsingh    4096 May 15 11:02  .
+drwxrwxrwx 1 vsingh vsingh    4096 Dec  1 11:32  ..
+drwxrwxrwx 1 vsingh vsingh    4096 Nov  4  2018 '3D Objects'
+drwxrwxrwx 1 vsingh vsingh    4096 Dec  1 11:33  AppData
+lrwxrwxrwx 1 vsingh vsingh      35 Dec  1 11:32 'Application Data'
+drwxrwxrwx 1 vsingh vsingh    4096 Nov  4  2018  Contacts
+lrwxrwxrwx 1 vsingh vsingh      63 Dec  1 11:32  Cookies
+drwxrwxrwx 1 vsingh vsingh    4096 May 27 23:15  Desktop
+drwxrwxrwx 1 vsingh vsingh    4096 Dec  1 11:55  Documents
+drwxrwxrwx 1 vsingh vsingh    4096 Nov  4  2018  Downloads
+drwxrwxrwx 1 vsingh vsingh    4096 Dec  1 11:37  Favorites
+drwxrwxrwx 1 vsingh vsingh    4096 Nov 14  2018  IntelGraphicsProfiles
+drwxrwxrwx 1 vsingh vsingh    4096 Dec  1 11:37  Links
+lrwxrwxrwx 1 vsingh vsingh      33 Dec  1 11:32 'Local Settings'
+drwxrwxrwx 1 vsingh vsingh    4096 Nov  4  2018  MicrosoftEdgeBackups
+drwxrwxrwx 1 vsingh vsingh    4096 Nov  4  2018  Music
+lrwxrwxrwx 1 vsingh vsingh      29 Dec  1 11:32 'My Documents'
+-rwxrwxrwx 1 vsingh vsingh 1572864 May 16 11:34  NTUSER.DAT
+-rwxrwxrwx 1 vsingh vsingh   65536 Dec  1 11:32  NTUSER.DAT{fd9a35db-49fe-11e9-aa2c-248a07783950}.TM.blf
+-rwxrwxrwx 1 vsingh vsingh  524288 Dec  1 11:32  NTUSER.DAT{fd9a35db-49fe-11e9-aa2c-248a07783950}.TMContainer00000000000000000001.regtrans-ms
+-rwxrwxrwx 1 vsingh vsingh  524288 Dec  1 11:32  NTUSER.DAT{fd9a35db-49fe-11e9-aa2c-248a07783950}.TMContainer00000000000000000002.regtrans-ms
+lrwxrwxrwx 1 vsingh vsingh      71 Dec  1 11:32  NetHood
+drwxrwxrwx 1 vsingh vsingh    4096 Nov 15  2018  OneDrive
+drwxrwxrwx 1 vsingh vsingh    4096 Nov  4  2018  Pictures
+lrwxrwxrwx 1 vsingh vsingh      71 Dec  1 11:32  PrintHood
+lrwxrwxrwx 1 vsingh vsingh      60 Dec  1 11:32  Recent
+drwxrwxrwx 1 vsingh vsingh    4096 Nov  4  2018 'Saved Games'
+drwxrwxrwx 1 vsingh vsingh    4096 Nov  4  2018  Searches
+lrwxrwxrwx 1 vsingh vsingh      60 Dec  1 11:32  SendTo
+lrwxrwxrwx 1 vsingh vsingh      64 Dec  1 11:32 'Start Menu'
+lrwxrwxrwx 1 vsingh vsingh      63 Dec  1 11:32  Templates
+drwxrwxrwx 1 vsingh vsingh    4096 Nov  4  2018  Videos
+-rwxrwxrwx 1 vsingh vsingh  278528 Dec  1 11:32  ntuser.dat.LOG1
+-rwxrwxrwx 1 vsingh vsingh  403456 Dec  1 11:32  ntuser.dat.LOG2
+vsingh@Gaurav:/mnt/c/Users/Gaurav$ cd ..
+vsingh@Gaurav:/mnt/c/Users$ ls -la
+ls: cannot read symbolic link 'All Users': Permission denied
+ls: cannot read symbolic link 'Default User': Permission denied
+total 0
+drwxrwxrwx 1 vsingh vsingh 4096 Dec  1 11:32  .
+drwxrwxrwx 1 vsingh vsingh 4096 May 22 18:26  ..
+drwxrwxrwx 1 vsingh vsingh 4096 May 27 21:18  Administrator
+lrwxrwxrwx 1 vsingh vsingh   18 Mar 19  2019 'All Users'
+drwxrwxrwx 1 vsingh vsingh 4096 Dec  1 12:27  Default
+lrwxrwxrwx 1 vsingh vsingh   20 Mar 19  2019 'Default User'
+drwxrwxrwx 1 vsingh vsingh 4096 May 15 11:02  Gaurav
+drwxrwxrwx 1 vsingh vsingh 4096 Dec  1 15:21  Public
+drwxrwxrwx 1 vsingh vsingh 4096 May 15 11:02  Saurabh
+drwxrwxrwx 1 vsingh vsingh 4096 Apr 11  2018  TEMP
+-rwxrwxrwx 1 vsingh vsingh  174 Mar 19  2019  desktop.ini
+vsingh@Gaurav:/mnt/c/Users$ cd Administrator/
+vsingh@Gaurav:/mnt/c/Users/Administrator$ ls -la
+ls: cannot read symbolic link 'Application Data': Permission denied
+ls: cannot read symbolic link 'Cookies': Permission denied
+ls: cannot read symbolic link 'Local Settings': Permission denied
+ls: cannot read symbolic link 'My Documents': Permission denied
+ls: cannot read symbolic link 'NetHood': Permission denied
+ls: cannot read symbolic link 'PrintHood': Permission denied
+ls: cannot read symbolic link 'Recent': Permission denied
+ls: cannot read symbolic link 'SendTo': Permission denied
+ls: cannot read symbolic link 'Start Menu': Permission denied
+ls: cannot read symbolic link 'Templates': Permission denied
+total 15652
+drwxrwxrwx 1 vsingh vsingh    4096 May 27 21:18  .
+drwxrwxrwx 1 vsingh vsingh    4096 Dec  1 11:32  ..
+drwxrwxrwx 1 vsingh vsingh    4096 Sep 26  2018  .AndroidStudio3.2
+drwxrwxrwx 1 vsingh vsingh    4096 Dec 25  2018  .FEffectStoreExe
+drwxrwxrwx 1 vsingh vsingh    4096 Dec 24  2018  .FNativeWebEngineExe
+drwxrwxrwx 1 vsingh vsingh    4096 Mar 16  2019  .PyCharm2018.3
+drwxrwxrwx 1 vsingh vsingh    4096 Dec 24  2018  .QtWebEngineProcess
+-rwxrwxrwx 1 vsingh vsingh    3060 Dec 27 01:12  .RData
+-rwxrwxrwx 1 vsingh vsingh    2167 Dec 27 01:25  .Rhistory
+drwxrwxrwx 1 vsingh vsingh    4096 Jul 21  2019 '.Wondershare Filmora9'
+drwxrwxrwx 1 vsingh vsingh    4096 Aug 29  2019  .anaconda
+drwxrwxrwx 1 vsingh vsingh    4096 Oct  9  2018  .android
+drwxrwxrwx 1 vsingh vsingh    4096 Jul 29  2017  .aspera
+-rwxrwxrwx 1 vsingh vsingh    8180 May 24 17:14  .bash_history
+drwxrwxrwx 1 vsingh vsingh    4096 Dec 30  2017  .cache
+drwxrwxrwx 1 vsingh vsingh    4096 May 14 11:00  .conda
+-rwxrwxrwx 1 vsingh vsingh      60 May 14 10:35  .condarc
+drwxrwxrwx 1 vsingh vsingh    4096 Aug 29  2019  .config
+drwxrwxrwx 1 vsingh vsingh    4096 Jul  5  2019  .eclipse
+-rwxrwxrwx 1 vsingh vsingh      16 Sep 26  2018  .emulator_console_auth_token
+-rwxrwxrwx 1 vsingh vsingh     444 May 19 23:16  .gitconfig
+drwxrwxrwx 1 vsingh vsingh    4096 Sep 26  2018  .gradle
+drwxrwxrwx 1 vsingh vsingh    4096 May 16  2018  .idlerc
+drwxrwxrwx 1 vsingh vsingh    4096 Apr 20 12:25  .ipynb_checkpoints
+drwxrwxrwx 1 vsingh vsingh    4096 Aug 29  2019  .ipython
+drwxrwxrwx 1 vsingh vsingh    4096 Jul  1  2019  .jmc
+drwxrwxrwx 1 vsingh vsingh    4096 Sep 16  2019  .jupyter
+drwxrwxrwx 1 vsingh vsingh    4096 Feb  1 12:13  .keras
+drwxrwxrwx 1 vsingh vsingh    4096 Apr 24 00:11  .matplotlib
+drwxrwxrwx 1 vsingh vsingh    4096 Sep 26  2019  .p2
+-rwxrwxrwx 1 vsingh vsingh      65 May 27 21:18  .pgAdmin4.1057243102.addr
+-rwxrwxrwx 1 vsingh vsingh     163 May 27 21:19  .pgAdmin4.1057243102.log
+-rwxrwxrwx 1 vsingh vsingh    1588 May 27 21:18  .pgAdmin4.startup.log
+drwxrwxrwx 1 vsingh vsingh    4096 Dec 26 15:14  .pylint.d
+-rwxrwxrwx 1 vsingh vsingh       0 May 15 23:36  .python_history
+drwxrwxrwx 1 vsingh vsingh    4096 Dec 26 22:57  .spyder
+drwxrwxrwx 1 vsingh vsingh    4096 Dec 28 19:16  .spyder-py3
+drwxrwxrwx 1 vsingh vsingh    4096 Jul  5  2019  .tooling
+-rwxrwxrwx 1 vsingh vsingh   15759 Mar 17 12:57  .viminfo
+drwxrwxrwx 1 vsingh vsingh    4096 Nov 30 01:21  .vscode
+drwxrwxrwx 1 vsingh vsingh    4096 May 15 11:05 '3D Objects'
+drwxrwxrwx 1 vsingh vsingh    4096 Oct 10  2018  AndroidStudioProjects
+drwxrwxrwx 1 vsingh vsingh    4096 Dec  1 11:35  AppData
+lrwxrwxrwx 1 vsingh vsingh      42 Dec  1 11:32 'Application Data'
+-rwxrwxrwx 1 vsingh vsingh   55493 Nov 28 23:47  BOOKNLTK.ipynb
+drwxrwxrwx 1 vsingh vsingh    4096 May 15 11:05  Contacts
+lrwxrwxrwx 1 vsingh vsingh      70 Dec  1 11:32  Cookies
+drwxrwxrwx 1 vsingh vsingh    4096 May 27 23:18  Desktop
+drwxrwxrwx 1 vsingh vsingh    4096 May 15 11:05  Documents
+drwxrwxrwx 1 vsingh vsingh    4096 May 27 17:47  Downloads
+drwxrwxrwx 1 vsingh vsingh    4096 Oct  6  2019  Dropbox
+drwxrwxrwx 1 vsingh vsingh    4096 Nov 30 00:42  Envs
+drwxrwxrwx 1 vsingh vsingh    4096 May 15 11:05  Favorites
+drwxrwxrwx 1 vsingh vsingh    4096 Apr 21  2018  Gaurav.Gaurav
+drwxrwxrwx 1 vsingh vsingh    4096 May 26  2019 'Google Drive'
+drwxrwxrwx 1 vsingh vsingh    4096 May 27 15:40  IntelGraphicsProfiles
+-rwxrwxrwx 1 vsingh vsingh    8605 Sep 16  2019  LinearReg.ipynb
+drwxrwxrwx 1 vsingh vsingh    4096 May 15 11:05  Links
+lrwxrwxrwx 1 vsingh vsingh      40 Dec  1 11:32 'Local Settings'
+drwxrwxrwx 1 vsingh vsingh    4096 May 15  2018  MicrosoftEdgeBackups
+drwxrwxrwx 1 vsingh vsingh    4096 May 15 11:05  Music
+lrwxrwxrwx 1 vsingh vsingh      36 Dec  1 11:32 'My Documents'
+-rwxrwxrwx 1 vsingh vsingh 8650752 May 25 23:46  NTUSER.DAT
+-rwxrwxrwx 1 vsingh vsingh 1048576 May 27 15:41  NTUSER.DAT{fd9a35da-49fe-11e9-aa2c-248a07783950}.TxR.0.regtrans-ms
+-rwxrwxrwx 1 vsingh vsingh 1048576 May 26 10:24  NTUSER.DAT{fd9a35da-49fe-11e9-aa2c-248a07783950}.TxR.1.regtrans-ms
+-rwxrwxrwx 1 vsingh vsingh 1048576 May 26 10:24  NTUSER.DAT{fd9a35da-49fe-11e9-aa2c-248a07783950}.TxR.2.regtrans-ms
+-rwxrwxrwx 1 vsingh vsingh   65536 May 27 15:41  NTUSER.DAT{fd9a35da-49fe-11e9-aa2c-248a07783950}.TxR.blf
+-rwxrwxrwx 1 vsingh vsingh   65536 Dec  1 11:32  NTUSER.DAT{fd9a35db-49fe-11e9-aa2c-248a07783950}.TM.blf
+-rwxrwxrwx 1 vsingh vsingh  524288 Dec  1 11:32  NTUSER.DAT{fd9a35db-49fe-11e9-aa2c-248a07783950}.TMContainer00000000000000000001.regtrans-ms
+-rwxrwxrwx 1 vsingh vsingh  524288 Dec  1 11:32  NTUSER.DAT{fd9a35db-49fe-11e9-aa2c-248a07783950}.TMContainer00000000000000000002.regtrans-ms
+lrwxrwxrwx 1 vsingh vsingh      78 Dec  1 11:32  NetHood
+drwxrwxrwx 1 vsingh vsingh    4096 Aug 10  2019  OneDrive
+drwxrwxrwx 1 vsingh vsingh    4096 May 15 11:05  Pictures
+lrwxrwxrwx 1 vsingh vsingh      78 Dec  1 11:32  PrintHood
+drwxrwxrwx 1 vsingh vsingh    4096 Mar 30  2019  PycharmProjects
+lrwxrwxrwx 1 vsingh vsingh      67 Dec  1 11:32  Recent
+-rwxrwxrwx 1 vsingh vsingh   16417 Nov 30 15:38  Regex.ipynb
+-rwxrwxrwx 1 vsingh vsingh    8044 Sep 28  2019  SDLproject.ipynb
+drwxrwxrwx 1 vsingh vsingh    4096 May 15 11:05 'Saved Games'
+drwxrwxrwx 1 vsingh vsingh    4096 May 15 11:05  Searches
+lrwxrwxrwx 1 vsingh vsingh      67 Dec  1 11:32  SendTo
+lrwxrwxrwx 1 vsingh vsingh      71 Dec  1 11:32 'Start Menu'
+-rwxrwxrwx 1 vsingh vsingh       0 Dec 25  2016  Sti_Trace.log
+lrwxrwxrwx 1 vsingh vsingh      70 Dec  1 11:32  Templates
+drwxrwxrwx 1 vsingh vsingh    4096 Oct 24  2017  Tracing
+-rwxrwxrwx 1 vsingh vsingh     555 Feb  3 20:13  Untitled.ipynb
+-rwxrwxrwx 1 vsingh vsingh    1451 Mar 13 02:32  Untitled1.ipynb
+-rwxrwxrwx 1 vsingh vsingh     846 Apr 20 13:47  Untitled2.ipynb
+-rwxrwxrwx 1 vsingh vsingh   27983 Nov 29 10:24  Untitled8.ipynb
+-rwxrwxrwx 1 vsingh vsingh   25070 Nov 29 10:31  Untitled9.ipynb
+drwxrwxrwx 1 vsingh vsingh    4096 May 15 11:05  Videos
+-rwxrwxrwx 1 vsingh vsingh      11 Jan 31  2018  data.txt
+-rwxrwxrwx 1 vsingh vsingh       0 May 30  2018  dir
+drwxrwxrwx 1 vsingh vsingh    4096 Sep 28  2018  eclipse
+drwxrwxrwx 1 vsingh vsingh    4096 Sep 12  2019  eclipse-workspace
+-rwxrwxrwx 1 vsingh vsingh    1915 Aug 30  2019  file1.ipynb
+-rwxrwxrwx 1 vsingh vsingh       0 Mar 16 23:32  git
+-rwxrwxrwx 1 vsingh vsingh   32436 Sep 26  2018  java_error_in_studio_10896.log
+drwxrwxrwx 1 vsingh vsingh    4096 Feb 26 23:54  kivy_venv
+-rwxrwxrwx 1 vsingh vsingh   53507 Nov 29 00:52  nltk_1.ipynb
+-rwxrwxrwx 1 vsingh vsingh 2097152 Dec  1 11:32  ntuser.dat.LOG1
+-rwxrwxrwx 1 vsingh vsingh  655360 Dec  1 11:32  ntuser.dat.LOG2
+-rwxrwxrwx 1 vsingh vsingh      20 Dec  1 12:36  ntuser.ini
+-rwxrwxrwx 1 vsingh vsingh    1951 Dec 26 14:54  pyautogui_tuto1.ipynb
+drwxrwxrwx 1 vsingh vsingh    4096 May 13 23:31  work
+vsingh@Gaurav:/mnt/c/Users/Administrator$ cd ..
+vsingh@Gaurav:/mnt/c/Users$ ls -la
+ls: cannot read symbolic link 'All Users': Permission denied
+ls: cannot read symbolic link 'Default User': Permission denied
+total 0
+drwxrwxrwx 1 vsingh vsingh 4096 Dec  1 11:32  .
+drwxrwxrwx 1 vsingh vsingh 4096 May 22 18:26  ..
+drwxrwxrwx 1 vsingh vsingh 4096 May 27 21:18  Administrator
+lrwxrwxrwx 1 vsingh vsingh   18 Mar 19  2019 'All Users'
+drwxrwxrwx 1 vsingh vsingh 4096 Dec  1 12:27  Default
+lrwxrwxrwx 1 vsingh vsingh   20 Mar 19  2019 'Default User'
+drwxrwxrwx 1 vsingh vsingh 4096 May 15 11:02  Gaurav
+drwxrwxrwx 1 vsingh vsingh 4096 Dec  1 15:21  Public
+drwxrwxrwx 1 vsingh vsingh 4096 May 15 11:02  Saurabh
+drwxrwxrwx 1 vsingh vsingh 4096 Apr 11  2018  TEMP
+-rwxrwxrwx 1 vsingh vsingh  174 Mar 19  2019  desktop.ini
+vsingh@Gaurav:/mnt/c/Users$ cd Public
+vsingh@Gaurav:/mnt/c/Users/Public$ ls -la
+total 92740
+drwxrwxrwx 1 vsingh vsingh     4096 Dec  1 15:21 .
+drwxrwxrwx 1 vsingh vsingh     4096 Dec  1 11:32 ..
+drwxrwxrwx 1 vsingh vsingh     4096 May 15 11:05 AccountPictures
+-rwxrwxrwx 1 vsingh vsingh 94942652 May 27 21:57 CAFADEBUG.log
+drwxrwxrwx 1 vsingh vsingh     4096 May 20 15:58 Desktop
+drwxrwxrwx 1 vsingh vsingh     4096 Dec  1 15:21 Documents
+drwxrwxrwx 1 vsingh vsingh     4096 Dec  1 14:47 Downloads
+drwxrwxrwx 1 vsingh vsingh     4096 Dec  1 15:20 Libraries
+drwxrwxrwx 1 vsingh vsingh     4096 Dec  1 14:47 Music
+drwxrwxrwx 1 vsingh vsingh     4096 Dec  1 14:47 Pictures
+drwxrwxrwx 1 vsingh vsingh     4096 Dec  1 14:47 Videos
+-rwxrwxrwx 1 vsingh vsingh      174 Mar 19  2019 desktop.ini
+-rwxrwxrwx 1 vsingh vsingh     1334 Jun  8  2018 spacedeskSetup.log
+vsingh@Gaurav:/mnt/c/Users/Public$ cd Desktop
+vsingh@Gaurav:/mnt/c/Users/Public/Desktop$ ls -la
+total 12
+drwxrwxrwx 1 vsingh vsingh 4096 May 20 15:58  .
+drwxrwxrwx 1 vsingh vsingh 4096 Dec  1 15:21  ..
+-rwxrwxrwx 1 vsingh vsingh 1217 May 15 22:24 'AOMEI Partition Assistant Standard Edition 8.8.lnk'
+-rwxrwxrwx 1 vsingh vsingh 2253 May 20 15:58 'Google Earth Pro.lnk'
+-rwxrwxrwx 1 vsingh vsingh 1081 Jul 21  2019 'Wondershare Filmora9.lnk'
+-rwxrwxrwx 1 vsingh vsingh  174 Mar 19  2019  desktop.ini
+vsingh@Gaurav:/mnt/c/Users/Public/Desktop$ cd ..
+vsingh@Gaurav:/mnt/c/Users/Public$ ls -la
+total 92740
+drwxrwxrwx 1 vsingh vsingh     4096 Dec  1 15:21 .
+drwxrwxrwx 1 vsingh vsingh     4096 Dec  1 11:32 ..
+drwxrwxrwx 1 vsingh vsingh     4096 May 15 11:05 AccountPictures
+-rwxrwxrwx 1 vsingh vsingh 94942652 May 27 21:57 CAFADEBUG.log
+drwxrwxrwx 1 vsingh vsingh     4096 May 20 15:58 Desktop
+drwxrwxrwx 1 vsingh vsingh     4096 Dec  1 15:21 Documents
+drwxrwxrwx 1 vsingh vsingh     4096 Dec  1 14:47 Downloads
+drwxrwxrwx 1 vsingh vsingh     4096 Dec  1 15:20 Libraries
+drwxrwxrwx 1 vsingh vsingh     4096 Dec  1 14:47 Music
+drwxrwxrwx 1 vsingh vsingh     4096 Dec  1 14:47 Pictures
+drwxrwxrwx 1 vsingh vsingh     4096 Dec  1 14:47 Videos
+-rwxrwxrwx 1 vsingh vsingh      174 Mar 19  2019 desktop.ini
+-rwxrwxrwx 1 vsingh vsingh     1334 Jun  8  2018 spacedeskSetup.log
+vsingh@Gaurav:/mnt/c/Users/Public$ cd ..
+vsingh@Gaurav:/mnt/c/Users$ ls -la
+ls: cannot read symbolic link 'All Users': Permission denied
+ls: cannot read symbolic link 'Default User': Permission denied
+total 0
+drwxrwxrwx 1 vsingh vsingh 4096 Dec  1 11:32  .
+drwxrwxrwx 1 vsingh vsingh 4096 May 22 18:26  ..
+drwxrwxrwx 1 vsingh vsingh 4096 May 27 21:18  Administrator
+lrwxrwxrwx 1 vsingh vsingh   18 Mar 19  2019 'All Users'
+drwxrwxrwx 1 vsingh vsingh 4096 Dec  1 12:27  Default
+lrwxrwxrwx 1 vsingh vsingh   20 Mar 19  2019 'Default User'
+drwxrwxrwx 1 vsingh vsingh 4096 May 15 11:02  Gaurav
+drwxrwxrwx 1 vsingh vsingh 4096 Dec  1 15:21  Public
+drwxrwxrwx 1 vsingh vsingh 4096 May 15 11:02  Saurabh
+drwxrwxrwx 1 vsingh vsingh 4096 Apr 11  2018  TEMP
+-rwxrwxrwx 1 vsingh vsingh  174 Mar 19  2019  desktop.ini
+vsingh@Gaurav:/mnt/c/Users$ cd Gaurav/
+vsingh@Gaurav:/mnt/c/Users/Gaurav$ ls -la
+ls: cannot read symbolic link 'Application Data': Permission denied
+ls: cannot read symbolic link 'Cookies': Permission denied
+ls: cannot read symbolic link 'Local Settings': Permission denied
+ls: cannot read symbolic link 'My Documents': Permission denied
+ls: cannot read symbolic link 'NetHood': Permission denied
+ls: cannot read symbolic link 'PrintHood': Permission denied
+ls: cannot read symbolic link 'Recent': Permission denied
+ls: cannot read symbolic link 'SendTo': Permission denied
+ls: cannot read symbolic link 'Start Menu': Permission denied
+ls: cannot read symbolic link 'Templates': Permission denied
+total 3292
+drwxrwxrwx 1 vsingh vsingh    4096 May 15 11:02  .
+drwxrwxrwx 1 vsingh vsingh    4096 Dec  1 11:32  ..
+drwxrwxrwx 1 vsingh vsingh    4096 Nov  4  2018 '3D Objects'
+drwxrwxrwx 1 vsingh vsingh    4096 Dec  1 11:33  AppData
+lrwxrwxrwx 1 vsingh vsingh      35 Dec  1 11:32 'Application Data'
+drwxrwxrwx 1 vsingh vsingh    4096 Nov  4  2018  Contacts
+lrwxrwxrwx 1 vsingh vsingh      63 Dec  1 11:32  Cookies
+drwxrwxrwx 1 vsingh vsingh    4096 May 27 23:15  Desktop
+drwxrwxrwx 1 vsingh vsingh    4096 Dec  1 11:55  Documents
+drwxrwxrwx 1 vsingh vsingh    4096 Nov  4  2018  Downloads
+drwxrwxrwx 1 vsingh vsingh    4096 Dec  1 11:37  Favorites
+drwxrwxrwx 1 vsingh vsingh    4096 Nov 14  2018  IntelGraphicsProfiles
+drwxrwxrwx 1 vsingh vsingh    4096 Dec  1 11:37  Links
+lrwxrwxrwx 1 vsingh vsingh      33 Dec  1 11:32 'Local Settings'
+drwxrwxrwx 1 vsingh vsingh    4096 Nov  4  2018  MicrosoftEdgeBackups
+drwxrwxrwx 1 vsingh vsingh    4096 Nov  4  2018  Music
+lrwxrwxrwx 1 vsingh vsingh      29 Dec  1 11:32 'My Documents'
+-rwxrwxrwx 1 vsingh vsingh 1572864 May 16 11:34  NTUSER.DAT
+-rwxrwxrwx 1 vsingh vsingh   65536 Dec  1 11:32  NTUSER.DAT{fd9a35db-49fe-11e9-aa2c-248a07783950}.TM.blf
+-rwxrwxrwx 1 vsingh vsingh  524288 Dec  1 11:32  NTUSER.DAT{fd9a35db-49fe-11e9-aa2c-248a07783950}.TMContainer00000000000000000001.regtrans-ms
+-rwxrwxrwx 1 vsingh vsingh  524288 Dec  1 11:32  NTUSER.DAT{fd9a35db-49fe-11e9-aa2c-248a07783950}.TMContainer00000000000000000002.regtrans-ms
+lrwxrwxrwx 1 vsingh vsingh      71 Dec  1 11:32  NetHood
+drwxrwxrwx 1 vsingh vsingh    4096 Nov 15  2018  OneDrive
+drwxrwxrwx 1 vsingh vsingh    4096 Nov  4  2018  Pictures
+lrwxrwxrwx 1 vsingh vsingh      71 Dec  1 11:32  PrintHood
+lrwxrwxrwx 1 vsingh vsingh      60 Dec  1 11:32  Recent
+drwxrwxrwx 1 vsingh vsingh    4096 Nov  4  2018 'Saved Games'
+drwxrwxrwx 1 vsingh vsingh    4096 Nov  4  2018  Searches
+lrwxrwxrwx 1 vsingh vsingh      60 Dec  1 11:32  SendTo
+lrwxrwxrwx 1 vsingh vsingh      64 Dec  1 11:32 'Start Menu'
+lrwxrwxrwx 1 vsingh vsingh      63 Dec  1 11:32  Templates
+drwxrwxrwx 1 vsingh vsingh    4096 Nov  4  2018  Videos
+-rwxrwxrwx 1 vsingh vsingh  278528 Dec  1 11:32  ntuser.dat.LOG1
+-rwxrwxrwx 1 vsingh vsingh  403456 Dec  1 11:32  ntuser.dat.LOG2
+vsingh@Gaurav:/mnt/c/Users/Gaurav$ cd Desktop
+vsingh@Gaurav:/mnt/c/Users/Gaurav/Desktop$ ls
+'Google Chrome.lnk'  'Microsoft Edge.lnk'   Notes.txt   desktop.ini   vishal.txt
+vsingh@Gaurav:/mnt/c/Users/Gaurav/Desktop$ cd ..
+vsingh@Gaurav:/mnt/c/Users/Gaurav$ ls -la
+ls: cannot read symbolic link 'Application Data': Permission denied
+ls: cannot read symbolic link 'Cookies': Permission denied
+ls: cannot read symbolic link 'Local Settings': Permission denied
+ls: cannot read symbolic link 'My Documents': Permission denied
+ls: cannot read symbolic link 'NetHood': Permission denied
+ls: cannot read symbolic link 'PrintHood': Permission denied
+ls: cannot read symbolic link 'Recent': Permission denied
+ls: cannot read symbolic link 'SendTo': Permission denied
+ls: cannot read symbolic link 'Start Menu': Permission denied
+ls: cannot read symbolic link 'Templates': Permission denied
+total 3292
+drwxrwxrwx 1 vsingh vsingh    4096 May 15 11:02  .
+drwxrwxrwx 1 vsingh vsingh    4096 Dec  1 11:32  ..
+drwxrwxrwx 1 vsingh vsingh    4096 Nov  4  2018 '3D Objects'
+drwxrwxrwx 1 vsingh vsingh    4096 Dec  1 11:33  AppData
+lrwxrwxrwx 1 vsingh vsingh      35 Dec  1 11:32 'Application Data'
+drwxrwxrwx 1 vsingh vsingh    4096 Nov  4  2018  Contacts
+lrwxrwxrwx 1 vsingh vsingh      63 Dec  1 11:32  Cookies
+drwxrwxrwx 1 vsingh vsingh    4096 May 27 23:15  Desktop
+drwxrwxrwx 1 vsingh vsingh    4096 Dec  1 11:55  Documents
+drwxrwxrwx 1 vsingh vsingh    4096 Nov  4  2018  Downloads
+drwxrwxrwx 1 vsingh vsingh    4096 Dec  1 11:37  Favorites
+drwxrwxrwx 1 vsingh vsingh    4096 Nov 14  2018  IntelGraphicsProfiles
+drwxrwxrwx 1 vsingh vsingh    4096 Dec  1 11:37  Links
+lrwxrwxrwx 1 vsingh vsingh      33 Dec  1 11:32 'Local Settings'
+drwxrwxrwx 1 vsingh vsingh    4096 Nov  4  2018  MicrosoftEdgeBackups
+drwxrwxrwx 1 vsingh vsingh    4096 Nov  4  2018  Music
+lrwxrwxrwx 1 vsingh vsingh      29 Dec  1 11:32 'My Documents'
+-rwxrwxrwx 1 vsingh vsingh 1572864 May 16 11:34  NTUSER.DAT
+-rwxrwxrwx 1 vsingh vsingh   65536 Dec  1 11:32  NTUSER.DAT{fd9a35db-49fe-11e9-aa2c-248a07783950}.TM.blf
+-rwxrwxrwx 1 vsingh vsingh  524288 Dec  1 11:32  NTUSER.DAT{fd9a35db-49fe-11e9-aa2c-248a07783950}.TMContainer00000000000000000001.regtrans-ms
+-rwxrwxrwx 1 vsingh vsingh  524288 Dec  1 11:32  NTUSER.DAT{fd9a35db-49fe-11e9-aa2c-248a07783950}.TMContainer00000000000000000002.regtrans-ms
+lrwxrwxrwx 1 vsingh vsingh      71 Dec  1 11:32  NetHood
+drwxrwxrwx 1 vsingh vsingh    4096 Nov 15  2018  OneDrive
+drwxrwxrwx 1 vsingh vsingh    4096 Nov  4  2018  Pictures
+lrwxrwxrwx 1 vsingh vsingh      71 Dec  1 11:32  PrintHood
+lrwxrwxrwx 1 vsingh vsingh      60 Dec  1 11:32  Recent
+drwxrwxrwx 1 vsingh vsingh    4096 Nov  4  2018 'Saved Games'
+drwxrwxrwx 1 vsingh vsingh    4096 Nov  4  2018  Searches
+lrwxrwxrwx 1 vsingh vsingh      60 Dec  1 11:32  SendTo
+lrwxrwxrwx 1 vsingh vsingh      64 Dec  1 11:32 'Start Menu'
+lrwxrwxrwx 1 vsingh vsingh      63 Dec  1 11:32  Templates
+drwxrwxrwx 1 vsingh vsingh    4096 Nov  4  2018  Videos
+-rwxrwxrwx 1 vsingh vsingh  278528 Dec  1 11:32  ntuser.dat.LOG1
+-rwxrwxrwx 1 vsingh vsingh  403456 Dec  1 11:32  ntuser.dat.LOG2
+vsingh@Gaurav:/mnt/c/Users/Gaurav$ cd ..
+vsingh@Gaurav:/mnt/c/Users$ ls -la
+ls: cannot read symbolic link 'All Users': Permission denied
+ls: cannot read symbolic link 'Default User': Permission denied
+total 0
+drwxrwxrwx 1 vsingh vsingh 4096 Dec  1 11:32  .
+drwxrwxrwx 1 vsingh vsingh 4096 May 22 18:26  ..
+drwxrwxrwx 1 vsingh vsingh 4096 May 27 21:18  Administrator
+lrwxrwxrwx 1 vsingh vsingh   18 Mar 19  2019 'All Users'
+drwxrwxrwx 1 vsingh vsingh 4096 Dec  1 12:27  Default
+lrwxrwxrwx 1 vsingh vsingh   20 Mar 19  2019 'Default User'
+drwxrwxrwx 1 vsingh vsingh 4096 May 15 11:02  Gaurav
+drwxrwxrwx 1 vsingh vsingh 4096 Dec  1 15:21  Public
+drwxrwxrwx 1 vsingh vsingh 4096 May 15 11:02  Saurabh
+drwxrwxrwx 1 vsingh vsingh 4096 Apr 11  2018  TEMP
+-rwxrwxrwx 1 vsingh vsingh  174 Mar 19  2019  desktop.ini
+vsingh@Gaurav:/mnt/c/Users$ cd Public
+vsingh@Gaurav:/mnt/c/Users/Public$ ls -la
+total 92740
+drwxrwxrwx 1 vsingh vsingh     4096 Dec  1 15:21 .
+drwxrwxrwx 1 vsingh vsingh     4096 Dec  1 11:32 ..
+drwxrwxrwx 1 vsingh vsingh     4096 May 15 11:05 AccountPictures
+-rwxrwxrwx 1 vsingh vsingh 94942652 May 27 21:57 CAFADEBUG.log
+drwxrwxrwx 1 vsingh vsingh     4096 May 20 15:58 Desktop
+drwxrwxrwx 1 vsingh vsingh     4096 Dec  1 15:21 Documents
+drwxrwxrwx 1 vsingh vsingh     4096 Dec  1 14:47 Downloads
+drwxrwxrwx 1 vsingh vsingh     4096 Dec  1 15:20 Libraries
+drwxrwxrwx 1 vsingh vsingh     4096 Dec  1 14:47 Music
+drwxrwxrwx 1 vsingh vsingh     4096 Dec  1 14:47 Pictures
+drwxrwxrwx 1 vsingh vsingh     4096 Dec  1 14:47 Videos
+-rwxrwxrwx 1 vsingh vsingh      174 Mar 19  2019 desktop.ini
+-rwxrwxrwx 1 vsingh vsingh     1334 Jun  8  2018 spacedeskSetup.log
+vsingh@Gaurav:/mnt/c/Users/Public$ cd Desktop
+vsingh@Gaurav:/mnt/c/Users/Public/Desktop$ ls -la
+total 12
+drwxrwxrwx 1 vsingh vsingh 4096 May 20 15:58  .
+drwxrwxrwx 1 vsingh vsingh 4096 Dec  1 15:21  ..
+-rwxrwxrwx 1 vsingh vsingh 1217 May 15 22:24 'AOMEI Partition Assistant Standard Edition 8.8.lnk'
+-rwxrwxrwx 1 vsingh vsingh 2253 May 20 15:58 'Google Earth Pro.lnk'
+-rwxrwxrwx 1 vsingh vsingh 1081 Jul 21  2019 'Wondershare Filmora9.lnk'
+-rwxrwxrwx 1 vsingh vsingh  174 Mar 19  2019  desktop.ini
+vsingh@Gaurav:/mnt/c/Users/Public/Desktop$ cd ..
+vsingh@Gaurav:/mnt/c/Users/Public$ cd ..
+vsingh@Gaurav:/mnt/c/Users$ cd Saurabh
+vsingh@Gaurav:/mnt/c/Users/Saurabh$ cd Desktop
+vsingh@Gaurav:/mnt/c/Users/Saurabh/Desktop$ ls -la
+total 544
+drwxrwxrwx 1 vsingh vsingh   4096 Dec  1 12:23  .
+drwxrwxrwx 1 vsingh vsingh   4096 May 15 11:02  ..
+-rwxrwxrwx 1 vsingh vsingh 214616 Aug  4  2015  71315358LExamForm.PDF
+drwxrwxrwx 1 vsingh vsingh   4096 Aug 14  2015  CDS
+drwxrwxrwx 1 vsingh vsingh   4096 Jul 15  2014  GAURAV
+-rwxrwxrwx 1 vsingh vsingh   2344 Jul 24  2019 'Google Chrome.lnk'
+-rwxrwxrwx 1 vsingh vsingh   1417 Jul 24  2019 'Microsoft Edge.lnk'
+-rwxrwxrwx 1 vsingh vsingh      0 Nov 25  2016 'New Microsoft Office Word Document.docx'
+drwxrwxrwx 1 vsingh vsingh   4096 Oct  8  2016 'Old Firefox Data'
+-rwxrwxrwx 1 vsingh vsingh  12738 Dec  4  2016 'Removed Apps.html'
+drwxrwxrwx 1 vsingh vsingh   4096 Aug 14  2015  Sautabj
+-rwxrwxrwx 1 vsingh vsingh  94209 Aug 14  2015  ass.png
+-rwxrwxrwx 1 vsingh vsingh 214707 Aug 14  2015  cds-223.png
+-rwxrwxrwx 1 vsingh vsingh    282 Jul 24  2019  desktop.ini
+drwxrwxrwx 1 vsingh vsingh   4096 Aug 14  2015  scds
+-rwxrwxrwx 1 vsingh vsingh    162 Jul  6  2014 '~$oject Work.docx'
+-rwxrwxrwx 1 vsingh vsingh    162 Sep  5  2014 '~$otocols.docx'
+-rwxrwxrwx 1 vsingh vsingh    162 Jul 10  2014 '~$roject.docx'
+-rwxrwxrwx 1 vsingh vsingh    162 Aug 12  2014 '~$w Microsoft Office Word Document.docx'
+vsingh@Gaurav:/mnt/c/Users/Saurabh/Desktop$ cd GAURAV/
+vsingh@Gaurav:/mnt/c/Users/Saurabh/Desktop/GAURAV$ ls -la
+total 0
+drwxrwxrwx 1 vsingh vsingh 4096 Jul 15  2014 .
+drwxrwxrwx 1 vsingh vsingh 4096 Dec  1 12:23 ..
+drwxrwxrwx 1 vsingh vsingh 4096 Jul 15  2014 Gaurav
+vsingh@Gaurav:/mnt/c/Users/Saurabh/Desktop/GAURAV$ cd Gaurav/
+vsingh@Gaurav:/mnt/c/Users/Saurabh/Desktop/GAURAV/Gaurav$ ls -la
+total 0
+drwxrwxrwx 1 vsingh vsingh 4096 Jul 15  2014  .
+drwxrwxrwx 1 vsingh vsingh 4096 Jul 15  2014  ..
+drwxrwxrwx 1 vsingh vsingh 4096 Jul 15  2014 'Gaurav Singh'
+vsingh@Gaurav:/mnt/c/Users/Saurabh/Desktop/GAURAV/Gaurav$ cd 'Gaurav Singh'/
+vsingh@Gaurav:/mnt/c/Users/Saurabh/Desktop/GAURAV/Gaurav/Gaurav Singh$ ls -la
+total 0
+drwxrwxrwx 1 vsingh vsingh 4096 Jul 15  2014 .
+drwxrwxrwx 1 vsingh vsingh 4096 Jul 15  2014 ..
+drwxrwxrwx 1 vsingh vsingh 4096 Jul 15  2014 Desktop
+drwxrwxrwx 1 vsingh vsingh 4096 Jul 15  2014 Documents
+drwxrwxrwx 1 vsingh vsingh 4096 Jul 15  2014 Favorites
+drwxrwxrwx 1 vsingh vsingh 4096 Jul 15  2014 Music
+drwxrwxrwx 1 vsingh vsingh 4096 Jul 15  2014 Pictures
+drwxrwxrwx 1 vsingh vsingh 4096 Jul 15  2014 Videos
+vsingh@Gaurav:/mnt/c/Users/Saurabh/Desktop/GAURAV/Gaurav/Gaurav Singh$ cd Desktop
+vsingh@Gaurav:/mnt/c/Users/Saurabh/Desktop/GAURAV/Gaurav/Gaurav Singh/Desktop$ ls -la
+total 0
+drwxrwxrwx 1 vsingh vsingh 4096 Jul 15  2014 .
+drwxrwxrwx 1 vsingh vsingh 4096 Jul 15  2014 ..
+drwxrwxrwx 1 vsingh vsingh 4096 Jul 15  2014 GAURAV
+vsingh@Gaurav:/mnt/c/Users/Saurabh/Desktop/GAURAV/Gaurav/Gaurav Singh/Desktop$ cd GAURAV/
+vsingh@Gaurav:/mnt/c/Users/Saurabh/Desktop/GAURAV/Gaurav/Gaurav Singh/Desktop/GAURAV$ ls -la
+total 0
+drwxrwxrwx 1 vsingh vsingh 4096 Jul 15  2014 .
+drwxrwxrwx 1 vsingh vsingh 4096 Jul 15  2014 ..
+drwxrwxrwx 1 vsingh vsingh 4096 Jul 15  2014 Vishal
+vsingh@Gaurav:/mnt/c/Users/Saurabh/Desktop/GAURAV/Gaurav/Gaurav Singh/Desktop/GAURAV$ cd Vishal
+vsingh@Gaurav:/mnt/c/Users/Saurabh/Desktop/GAURAV/Gaurav/Gaurav Singh/Desktop/GAURAV/Vishal$ ls -la
+total 0
+drwxrwxrwx 1 vsingh vsingh 4096 Jul 15  2014 .
+drwxrwxrwx 1 vsingh vsingh 4096 Jul 15  2014 ..
+drwxrwxrwx 1 vsingh vsingh 4096 Jul 15  2014 Vishal
+vsingh@Gaurav:/mnt/c/Users/Saurabh/Desktop/GAURAV/Gaurav/Gaurav Singh/Desktop/GAURAV/Vishal$ cd Vishal
+vsingh@Gaurav:/mnt/c/Users/Saurabh/Desktop/GAURAV/Gaurav/Gaurav Singh/Desktop/GAURAV/Vishal/Vishal$ ls -la
+total 0
+drwxrwxrwx 1 vsingh vsingh 4096 Jul 15  2014 .
+drwxrwxrwx 1 vsingh vsingh 4096 Jul 15  2014 ..
+drwxrwxrwx 1 vsingh vsingh 4096 Jul 15  2014 Favorites
+drwxrwxrwx 1 vsingh vsingh 4096 Jul 15  2014 Music
+drwxrwxrwx 1 vsingh vsingh 4096 Jul 15  2014 Pictures
+drwxrwxrwx 1 vsingh vsingh 4096 Jul 15  2014 Videos
+vsingh@Gaurav:/mnt/c/Users/Saurabh/Desktop/GAURAV/Gaurav/Gaurav Singh/Desktop/GAURAV/Vishal/Vishal$ cd Music
+vsingh@Gaurav:/mnt/c/Users/Saurabh/Desktop/GAURAV/Gaurav/Gaurav Singh/Desktop/GAURAV/Vishal/Vishal/Music$ ls -la
+total 0
+drwxrwxrwx 1 vsingh vsingh 4096 Jul 15  2014 .
+drwxrwxrwx 1 vsingh vsingh 4096 Jul 15  2014 ..
+-rwxrwxrwx 1 vsingh vsingh  504 Jul 15  2014 desktop.ini
+vsingh@Gaurav:/mnt/c/Users/Saurabh/Desktop/GAURAV/Gaurav/Gaurav Singh/Desktop/GAURAV/Vishal/Vishal/Music$ cd ..
+vsingh@Gaurav:/mnt/c/Users/Saurabh/Desktop/GAURAV/Gaurav/Gaurav Singh/Desktop/GAURAV/Vishal/Vishal$ cd ..
+vsingh@Gaurav:/mnt/c/Users/Saurabh/Desktop/GAURAV/Gaurav/Gaurav Singh/Desktop/GAURAV/Vishal$ cd ..
+vsingh@Gaurav:/mnt/c/Users/Saurabh/Desktop/GAURAV/Gaurav/Gaurav Singh/Desktop/GAURAV$ cd ..
+vsingh@Gaurav:/mnt/c/Users/Saurabh/Desktop/GAURAV/Gaurav/Gaurav Singh/Desktop$ cd ..
+vsingh@Gaurav:/mnt/c/Users/Saurabh/Desktop/GAURAV/Gaurav/Gaurav Singh$ cd ..
+vsingh@Gaurav:/mnt/c/Users/Saurabh/Desktop/GAURAV/Gaurav$ cd ..
+vsingh@Gaurav:/mnt/c/Users/Saurabh/Desktop/GAURAV$ cd ..
+vsingh@Gaurav:/mnt/c/Users/Saurabh/Desktop$ cd ..
+vsingh@Gaurav:/mnt/c/Users/Saurabh$ cd ..
+vsingh@Gaurav:/mnt/c/Users$ ls -la
+ls: cannot read symbolic link 'All Users': Permission denied
+ls: cannot read symbolic link 'Default User': Permission denied
+total 0
+drwxrwxrwx 1 vsingh vsingh 4096 Dec  1 11:32  .
+drwxrwxrwx 1 vsingh vsingh 4096 May 22 18:26  ..
+drwxrwxrwx 1 vsingh vsingh 4096 May 27 21:18  Administrator
+lrwxrwxrwx 1 vsingh vsingh   18 Mar 19  2019 'All Users'
+drwxrwxrwx 1 vsingh vsingh 4096 Dec  1 12:27  Default
+lrwxrwxrwx 1 vsingh vsingh   20 Mar 19  2019 'Default User'
+drwxrwxrwx 1 vsingh vsingh 4096 May 15 11:02  Gaurav
+drwxrwxrwx 1 vsingh vsingh 4096 Dec  1 15:21  Public
+drwxrwxrwx 1 vsingh vsingh 4096 May 15 11:02  Saurabh
+drwxrwxrwx 1 vsingh vsingh 4096 Apr 11  2018  TEMP
+-rwxrwxrwx 1 vsingh vsingh  174 Mar 19  2019  desktop.ini
+vsingh@Gaurav:/mnt/c/Users$ cd Gaurav/
+vsingh@Gaurav:/mnt/c/Users/Gaurav$ ls -la
+ls: cannot read symbolic link 'Application Data': Permission denied
+ls: cannot read symbolic link 'Cookies': Permission denied
+ls: cannot read symbolic link 'Local Settings': Permission denied
+ls: cannot read symbolic link 'My Documents': Permission denied
+ls: cannot read symbolic link 'NetHood': Permission denied
+ls: cannot read symbolic link 'PrintHood': Permission denied
+ls: cannot read symbolic link 'Recent': Permission denied
+ls: cannot read symbolic link 'SendTo': Permission denied
+ls: cannot read symbolic link 'Start Menu': Permission denied
+ls: cannot read symbolic link 'Templates': Permission denied
+total 3292
+drwxrwxrwx 1 vsingh vsingh    4096 May 15 11:02  .
+drwxrwxrwx 1 vsingh vsingh    4096 Dec  1 11:32  ..
+drwxrwxrwx 1 vsingh vsingh    4096 Nov  4  2018 '3D Objects'
+drwxrwxrwx 1 vsingh vsingh    4096 Dec  1 11:33  AppData
+lrwxrwxrwx 1 vsingh vsingh      35 Dec  1 11:32 'Application Data'
+drwxrwxrwx 1 vsingh vsingh    4096 Nov  4  2018  Contacts
+lrwxrwxrwx 1 vsingh vsingh      63 Dec  1 11:32  Cookies
+drwxrwxrwx 1 vsingh vsingh    4096 May 27 23:15  Desktop
+drwxrwxrwx 1 vsingh vsingh    4096 Dec  1 11:55  Documents
+drwxrwxrwx 1 vsingh vsingh    4096 Nov  4  2018  Downloads
+drwxrwxrwx 1 vsingh vsingh    4096 Dec  1 11:37  Favorites
+drwxrwxrwx 1 vsingh vsingh    4096 Nov 14  2018  IntelGraphicsProfiles
+drwxrwxrwx 1 vsingh vsingh    4096 Dec  1 11:37  Links
+lrwxrwxrwx 1 vsingh vsingh      33 Dec  1 11:32 'Local Settings'
+drwxrwxrwx 1 vsingh vsingh    4096 Nov  4  2018  MicrosoftEdgeBackups
+drwxrwxrwx 1 vsingh vsingh    4096 Nov  4  2018  Music
+lrwxrwxrwx 1 vsingh vsingh      29 Dec  1 11:32 'My Documents'
+-rwxrwxrwx 1 vsingh vsingh 1572864 May 16 11:34  NTUSER.DAT
+-rwxrwxrwx 1 vsingh vsingh   65536 Dec  1 11:32  NTUSER.DAT{fd9a35db-49fe-11e9-aa2c-248a07783950}.TM.blf
+-rwxrwxrwx 1 vsingh vsingh  524288 Dec  1 11:32  NTUSER.DAT{fd9a35db-49fe-11e9-aa2c-248a07783950}.TMContainer00000000000000000001.regtrans-ms
+-rwxrwxrwx 1 vsingh vsingh  524288 Dec  1 11:32  NTUSER.DAT{fd9a35db-49fe-11e9-aa2c-248a07783950}.TMContainer00000000000000000002.regtrans-ms
+lrwxrwxrwx 1 vsingh vsingh      71 Dec  1 11:32  NetHood
+drwxrwxrwx 1 vsingh vsingh    4096 Nov 15  2018  OneDrive
+drwxrwxrwx 1 vsingh vsingh    4096 Nov  4  2018  Pictures
+lrwxrwxrwx 1 vsingh vsingh      71 Dec  1 11:32  PrintHood
+lrwxrwxrwx 1 vsingh vsingh      60 Dec  1 11:32  Recent
+drwxrwxrwx 1 vsingh vsingh    4096 Nov  4  2018 'Saved Games'
+drwxrwxrwx 1 vsingh vsingh    4096 Nov  4  2018  Searches
+lrwxrwxrwx 1 vsingh vsingh      60 Dec  1 11:32  SendTo
+lrwxrwxrwx 1 vsingh vsingh      64 Dec  1 11:32 'Start Menu'
+lrwxrwxrwx 1 vsingh vsingh      63 Dec  1 11:32  Templates
+drwxrwxrwx 1 vsingh vsingh    4096 Nov  4  2018  Videos
+-rwxrwxrwx 1 vsingh vsingh  278528 Dec  1 11:32  ntuser.dat.LOG1
+-rwxrwxrwx 1 vsingh vsingh  403456 Dec  1 11:32  ntuser.dat.LOG2
+vsingh@Gaurav:/mnt/c/Users/Gaurav$ cd Desktop
+vsingh@Gaurav:/mnt/c/Users/Gaurav/Desktop$ ls -la
+total 8
+drwxrwxrwx 1 vsingh vsingh 4096 May 27 23:15  .
+drwxrwxrwx 1 vsingh vsingh 4096 May 15 11:02  ..
+-rwxrwxrwx 1 vsingh vsingh 2344 Nov  4  2018 'Google Chrome.lnk'
+-rwxrwxrwx 1 vsingh vsingh 1417 Nov  4  2018 'Microsoft Edge.lnk'
+-rwxrwxrwx 1 vsingh vsingh    0 Nov 13  2018  Notes.txt
+-rwxrwxrwx 1 vsingh vsingh  282 Nov  4  2018  desktop.ini
+-rwxrwxrwx 1 vsingh vsingh    0 May 27 23:15  vishal.txt
+vsingh@Gaurav:/mnt/c/Users/Gaurav/Desktop$ cd desktop.ini
+-bash: cd: desktop.ini: Not a directory
+vsingh@Gaurav:/mnt/c/Users/Gaurav/Desktop$ ls
+'Google Chrome.lnk'  'Microsoft Edge.lnk'   Notes.txt   desktop.ini   vishal.txt
+vsingh@Gaurav:/mnt/c/Users/Gaurav/Desktop$
