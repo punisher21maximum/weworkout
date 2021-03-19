@@ -49,7 +49,7 @@ django-simple-history==2.8.0
 django-social-share==1.4.0
 django-storages==1.9.1
 django-url-filter==0.3.13
-djangorestframework==3.10.2
+djangorestframework==3.11.2
 djangorestframework-jwt==1.11.0
 docutils==0.15.2
 docx2pdf==0.1.5
