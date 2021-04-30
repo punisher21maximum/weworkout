@@ -112,7 +112,7 @@ tqdm==4.46.0
 Twisted==20.3.0
 txaio==20.4.1
 typed-ast==1.4.0
-urllib3==1.25.3
+urllib3==1.25.8
 virtualenv==20.0.20
 virtualenvwrapper-win==1.2.6
 wasabi==0.6.0
